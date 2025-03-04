@@ -1,0 +1,23 @@
+# Version control
+.git
+.gitignore
+
+# Dependencies
+node_modules
+npm-debug.log
+
+# Build output
+.svelte-kit
+build
+
+# Development
+.vscode
+.DS_Store
+*.pem
+.env*
+!.env.example
+
+# Docker
+Dockerfile
+.dockerignore
+.devcontainer

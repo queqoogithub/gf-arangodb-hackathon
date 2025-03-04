@@ -15,7 +15,7 @@ export async function POST({ request }) {
     const requestData = await request.json();
     
     // Forward the request to your Python backend
-    const response = await fetch('http://localhost:8000/job_graph/', {
+    const response = await fetch('http://host.docker.internal:8000/job_graph/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
