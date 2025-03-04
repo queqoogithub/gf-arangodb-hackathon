@@ -1,8 +1,0 @@
-langchain_community
-nx-arangodb
-langchain-google-genai
-google-genai
-pydantic
-fuzzywuzzy
-python-Levenshtein
-python-dotenv
