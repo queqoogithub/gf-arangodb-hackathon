@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import ForceGraph from '../lib/ForceGraph.svelte';
+  import BaseGraph from '../lib/BaseGraph.svelte';
 
   let nlQuery = '';
   let isLoading = false;
@@ -71,6 +72,7 @@
   <div class="graph-section bg-gray-100 p-4 rounded-md">
     <h3 class="text-center text-gray-700 mb-2">JOBS GRAPH &lt;output&gt;</h3>
     <div class="graph-container h-64 bg-white rounded-md border border-gray-200">
+        <BaseGraph />
       {#if graphData.nodes.length > 0}
         <ForceGraph {graphData} />
       {:else}
