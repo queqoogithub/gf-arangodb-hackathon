@@ -4,8 +4,27 @@ from pydantic import BaseModel
 from typing import List, Dict
 
 from gen_graph import json_for_graph
+from chatbot import chatbot
 
 app = FastAPI(title="Job Skills Graph API")
+
+class ChatbotRequest(BaseModel):
+    query: str
+
+class ChatbotResponse(BaseModel):
+    response: str
+
+@app.post("/chat/", response_model=ChatbotResponse)
+async def chat_endpoint(request: ChatbotRequest):
+    """
+    Process a chat query and return the response from the chatbot.
+    """
+    try:
+        response = chatbot(request.query)
+        return ChatbotResponse(response=response)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 app.add_middleware(
     CORSMiddleware,
