@@ -1,7 +1,9 @@
 <script lang="ts">
+  import { marked } from 'marked';
   let jobName = '';
   let isLoading = false;
   let responseText = '';
+  $: formattedResponse = responseText ? marked(responseText) : '';
   let error: Error | null = null;
 
   async function generateResponse() {
@@ -40,7 +42,7 @@
 </script>
 
 <div class="skill-graph-container">
-  <h2 class="text-xl font-bold text-orange-500 mb-4">Job Analysis</h2>
+  <h2 class="text-xl font-bold text-orange-500 mb-4">🔮 Tell us more to foresee your inner talent</h2>
   
   <div class="input-section bg-gray-100 p-4 rounded-md mb-4">
     <h3 class="text-center text-gray-700 mb-2">JOB &lt;input&gt;</h3>
@@ -67,8 +69,8 @@
   <div class="response-section bg-gray-100 p-4 rounded-md">
     <h3 class="text-center text-gray-700 mb-2">ANALYSIS &lt;output&gt;</h3>
     <div class="response-container min-h-[8rem] p-4 bg-white rounded-md border border-gray-200">
-      {#if responseText}
-        <p class="text-gray-700 whitespace-pre-line">{responseText}</p>
+      {#if formattedResponse}
+        <div class="text-gray-700 prose prose-orange prose-sm max-w-none">{@html formattedResponse}</div>
       {:else}
         <div class="flex items-center justify-center h-full text-gray-400">
           Enter your job interests and skills, then click Generate to see the analysis

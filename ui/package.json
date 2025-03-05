@@ -15,6 +15,7 @@
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@tailwindcss/typography": "^0.5.16",
 		"autoprefixer": "^10.4.20",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
@@ -25,6 +26,7 @@
 	"dependencies": {
 		"@xyflow/svelte": "^0.1.31",
 		"d3": "^7.9.0",
-		"elkjs": "^0.9.3"
+		"elkjs": "^0.9.3",
+		"marked": "^15.0.7"
 	}
 }

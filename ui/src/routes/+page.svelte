@@ -26,7 +26,7 @@
       class="tab-button {activeTab === 'skills' ? 'active' : ''}" 
       on:click={() => setActiveTab('skills')}
     >
-      Skill Graph
+      Jobs Chat
     </button>
   </div>
 
