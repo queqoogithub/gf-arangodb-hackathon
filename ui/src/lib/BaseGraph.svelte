@@ -17,13 +17,13 @@
     {
       id: '1',
       type: 'input',
-      data: { label: 'Input Node' },
-      position: { x: 0, y: 0 }
+      data: { label: 'Start' },
+      position: { x: 200, y: 0 }
     },
     {
       id: '2',
       type: 'default',
-      data: { label: 'Node' },
+      data: { label: 'Supercalifragiliticespiladocious' },
       position: { x: 0, y: 150 }
     },
     {
@@ -37,6 +37,12 @@
       type: 'default',
       data: { label: 'Node 4' },
       position: { x: 400, y: 150 }
+    },
+    {
+      id: '5',
+      type: 'default',
+      data: { label: 'Node 5' },
+      position: { x: 400, y: 300 }
     }
   ]);
  
@@ -58,7 +64,7 @@
     },
   ]);
  
-  const snapGrid = /** @type {[number, number]} */ ([25, 25]);
+  // const snapGrid = /** @type {[number, number]} */ ([25, 25]);
 </script>
  
 <!--

@@ -44,22 +44,28 @@
   }
 </script>
 
-<div class="job-graph-container">
-  <h2 class="text-xl font-bold text-blue-500 mb-4">Jobs Graph</h2>
+<main class="h-full bg-white-100 p-10">
+  <!-- <h2 class="text-xl font-bold text-blue-500 mb-4">Jobs Graph</h2> -->
   
-  <div class="input-section bg-gray-100 p-4 rounded-md mb-4">
-    <h3 class="text-center text-gray-700 mb-2">NLQ &lt;input&gt;</h3>
+  <section class="p-4 rounded-md">
+    <!-- <h3 class="text-center text-gray-700 mb-2">NLQ &lt;input&gt;</h3> -->
+    <h2 class="text-center font-medium text-stone-700 mb-2">Tell us what you're interested in</h2>
     <div class="flex gap-2">
-      <input
+      <textarea 
+        bind:value={nlQuery}
+        placeholder="I like to paint and I know how to code"
+        class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
+      ></textarea>
+      <!-- <input
         type="text"
         bind:value={nlQuery}
-        placeholder="Enter natural language query (e.g., 'Jobs similar to data scientist')"
-        class="flex-grow p-2 border rounded-md"
-      />
+        placeholder="I like to paint and I know how to code"
+        class="flex-grow p-2 border rounded-md text-stone-800 placeholder-stone-300"
+      /> -->
       <button 
         on:click={generateJobGraph}
         disabled={isLoading}
-        class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 disabled:bg-gray-400"
+        class="bg-lime-600 text-stone-50 px-4 py-2 rounded-md hover:bg-lime-700 disabled:bg-stone-400"
       >
         {isLoading ? 'Loading...' : 'Generate'}
       </button>
@@ -67,19 +73,20 @@
     {#if error}
       <p class="text-red-500 mt-2">{error}</p>
     {/if}
-  </div>
+  </section>
   
-  <div class="graph-section bg-gray-100 p-4 rounded-md">
-    <h3 class="text-center text-gray-700 mb-2">JOBS GRAPH &lt;output&gt;</h3>
-    <div class="graph-container h-64 bg-white rounded-md border border-gray-200">
+  <section class="graph-section h-full p-4 rounded-md">
+    <!-- <h3 class="text-center text-gray-700">JOBS GRAPH &lt;output&gt;</h3> -->
+    <h3 class="text-center font-medium text-stone-700 mb-2">Job Matches Based on Your Interests & Skills</h3>
+    <div class="graph-container h-full outline-2 outline-red-600 bg-stone-100 rounded-md border">
         <BaseGraph />
-      {#if graphData.nodes.length > 0}
+      <!-- {#if graphData.nodes.length > 0}
         <ForceGraph {graphData} />
       {:else}
         <div class="flex items-center justify-center h-full text-gray-400">
           Enter a query and click Generate to see the job graph
         </div>
-      {/if}
+      {/if} -->
     </div>
-  </div>
-</div>
+  </section>
+</main>
