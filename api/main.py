@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict
 
+from gen_graph import json_for_graph
+
 app = FastAPI(title="Job Skills Graph API")
 
 app.add_middleware(
@@ -14,6 +16,31 @@ app.add_middleware(
 )
 
 # Data Models
+class GenGraphRequest(BaseModel):
+    query: str
+
+class GenGraphNode(BaseModel):
+    job: str
+    min_salary: int
+    max_salary: int
+    min_exp: float
+    max_exp: float
+    level: str
+    category: str
+    job_description: str
+    hard_skill: List[str]
+    soft_skill: List[str]
+    interest: List[str]
+    education: List[str]
+    children: List['GenGraphNode'] = []
+
+GenGraphNode.model_rebuild()  # This rebuilds the model to handle the recursive reference
+
+class GenGraphResponse(BaseModel):
+    nlq: str
+    user_input: Dict[str, List[str]]
+    nodes: List[GenGraphNode]
+
 class NLQRequest(BaseModel):
     queries: List[str]
 
@@ -57,6 +84,17 @@ async def get_skill_graph(job_names: List[str]):
             {"source": "skill1", "target": "skill2", "weight": 1}
         ]
         return GraphResponse(nodes=nodes, edges=edges)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/gen_graph/", response_model=GenGraphResponse)
+async def generate_graph(request: GenGraphRequest):
+    """
+    Generate a job skills graph based on user input query.
+    """
+    try:
+        return json_for_graph(request.query)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
