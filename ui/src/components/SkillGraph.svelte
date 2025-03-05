@@ -1,38 +1,34 @@
-<script>
-  import { onMount } from 'svelte';
-  import ForceGraph from '../lib/ForceGraph.svelte';
-
+<script lang="ts">
   let jobName = '';
   let isLoading = false;
-  let graphData = { nodes: [], edges: [] };
-/**
- * @type {Error|null} error - Holds the error object if an error occurs, otherwise null.
- */
-  let error = null;
+  let responseText = '';
+  let error: Error | null = null;
 
-  async function generateSkillGraph() {
+  async function generateResponse() {
     if (!jobName.trim()) {
-      error = new Error("Please enter a job name");
+      error = new Error("Please enter your job interests and skills");
       return;
     }
     
     error = null;
     isLoading = true;
+    responseText = '';
     
     try {
-      const response = await fetch('/api/skill_graph', {
+      const chatResponse = await fetch('http://localhost:8000/chat/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify([jobName])
+        body: JSON.stringify({ query: jobName })
       });
       
-      if (!response.ok) {
-        throw new Error('Failed to generate skill graph');
+      if (!chatResponse.ok) {
+        throw new Error('Failed to generate response');
       }
       
-      graphData = await response.json();
+      const { response } = await chatResponse.json();
+      responseText = response;
       
     } catch (err) {
       error = err instanceof Error ? err : new Error('An unknown error occurred');
@@ -44,7 +40,7 @@
 </script>
 
 <div class="skill-graph-container">
-  <h2 class="text-xl font-bold text-orange-500 mb-4">Skill Graph</h2>
+  <h2 class="text-xl font-bold text-orange-500 mb-4">Job Analysis</h2>
   
   <div class="input-section bg-gray-100 p-4 rounded-md mb-4">
     <h3 class="text-center text-gray-700 mb-2">JOB &lt;input&gt;</h3>
@@ -52,11 +48,11 @@
       <input
         type="text"
         bind:value={jobName}
-        placeholder="Enter job title (e.g., 'Data Scientist')"
+        placeholder="Describe your job interests and skills (e.g., 'I'm interested in data science and know Python')"
         class="flex-grow p-2 border rounded-md"
       />
       <button 
-        on:click={generateSkillGraph}
+        on:click={generateResponse}
         disabled={isLoading}
         class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 disabled:bg-gray-400"
       >
@@ -68,14 +64,14 @@
     {/if}
   </div>
   
-  <div class="graph-section bg-gray-100 p-4 rounded-md">
-    <h3 class="text-center text-gray-700 mb-2">SKILL GRAPH &lt;output&gt;</h3>
-    <div class="graph-container h-64 bg-white rounded-md border border-gray-200">
-      {#if graphData.nodes.length > 0}
-        <ForceGraph {graphData} nodeColors={{skill1: "#f8d4ba", skill2: "#bdd8f1"}} />
+  <div class="response-section bg-gray-100 p-4 rounded-md">
+    <h3 class="text-center text-gray-700 mb-2">ANALYSIS &lt;output&gt;</h3>
+    <div class="response-container min-h-[8rem] p-4 bg-white rounded-md border border-gray-200">
+      {#if responseText}
+        <p class="text-gray-700 whitespace-pre-line">{responseText}</p>
       {:else}
         <div class="flex items-center justify-center h-full text-gray-400">
-          Enter a job title and click Generate to see the skill graph
+          Enter your job interests and skills, then click Generate to see the analysis
         </div>
       {/if}
     </div>
