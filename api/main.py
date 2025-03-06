@@ -1,12 +1,46 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, model_validator
 from typing import List, Dict
 
 from gen_graph import json_for_graph
 from chatbot import chatbot
 
 app = FastAPI(title="Job Skills Graph API")
+
+class GenGraphNode(BaseModel):
+    job: str
+    min_salary: int
+    max_salary: int
+    min_exp: float
+    max_exp: float
+    level: str
+    category: str
+    job_description: str
+    hard_skill: List[str]
+    soft_skill: List[str]
+    interest: List[str]
+    education: List[str]
+    children: List['GenGraphNode'] = []
+    
+    @model_validator(mode='after')
+    def validate_salary_and_exp_range(self):
+        # Validate salary range
+        if self.min_salary > self.max_salary:
+            raise ValueError("Minimum salary cannot be greater than maximum salary")
+        
+        # Validate experience range
+        if self.min_exp > self.max_exp:
+            raise ValueError("Minimum experience cannot be greater than maximum experience")
+        
+        # Validate level values
+        allowed_levels = ["Junior", "Mid", "Senior", "Lead", "Executive"]
+        if self.level not in allowed_levels:
+            raise ValueError(f"Level must be one of {allowed_levels}")
+            
+        return self
+
+GenGraphNode.model_rebuild()  # This rebuilds the model to handle the recursive reference
 
 class ChatbotRequest(BaseModel):
     query: str
@@ -93,34 +127,38 @@ async def create_job_graph(request: NLQRequest):
     # except Exception as e:
     #     raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/skill_graph/", response_model=GraphResponse)
-async def get_skill_graph(job_names: List[str]):
-    """
-    Get skill graph based on job names.
-    """
-    try:
-        # Mock implementation - replace with actual logic
-        nodes = [
-            {"id": "skill1", "label": "Python"},
-            {"id": "skill2", "label": "Data Analysis"}
-        ]
-        edges = [
-            {"source": "skill1", "target": "skill2", "weight": 1}
-        ]
-        return GraphResponse(nodes=nodes, edges=edges)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-
 @app.post("/gen_graph/", response_model=GenGraphResponse)
 async def generate_graph(request: GenGraphRequest):
     """
     Generate a job skills graph based on user input query.
     """
     try:
-        return json_for_graph(request.query)
+        response = json_for_graph(request.query)
+        # Additional validation if needed beyond Pydantic model validation
+        validate_graph_nodes(response.nodes)
+        return response
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+def validate_graph_nodes(nodes: List[GenGraphNode]):
+    """
+    Additional validation for graph nodes beyond the Pydantic model validation.
+    """
+    if not nodes:
+        raise ValueError("Graph must contain at least one node")
+    
+    # Check for duplicate job titles
+    job_titles = [node.job for node in nodes]
+    if len(job_titles) != len(set(job_titles)):
+        raise ValueError("Job titles must be unique at each level of the graph")
+    
+    # Validate each node's children
+    for node in nodes:
+        if node.children:
+            validate_graph_nodes(node.children)
+
 
 if __name__ == "__main__":
     import uvicorn

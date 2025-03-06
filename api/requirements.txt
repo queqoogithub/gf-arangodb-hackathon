@@ -7,3 +7,4 @@ fuzzywuzzy
 python-arango
 langchain-community
 langchain-openai
+langchain-google-genai
