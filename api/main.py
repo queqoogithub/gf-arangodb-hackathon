@@ -70,23 +70,28 @@ class GraphResponse(BaseModel):
     nodes: List[Dict]
     edges: List[Dict]
 
-@app.post("/job_graph/", response_model=GraphResponse)
+@app.post("/job_graph/", response_model=GenGraphResponse)
 async def create_job_graph(request: NLQRequest):
     """
     Create a job graph based on natural language queries.
     """
     try:
-        # Mock implementation - replace with actual logic
-        nodes = [
-            {"id": "job1", "label": request.queries[0]},
-            {"id": "job2", "label": "Related Job"}
-        ]
-        edges = [
-            {"source": "job1", "target": "job2", "weight": 1}
-        ]
-        return GraphResponse(nodes=nodes, edges=edges)
+        return json_for_graph(request.queries[0])
     except Exception as e:
+        print(e)
         raise HTTPException(status_code=500, detail=str(e))
+    # try:
+    #     # Mock implementation - replace with actual logic
+    #     nodes = [
+    #         {"id": "job1", "label": request.queries[0]},
+    #         {"id": "job2", "label": "Related Job"}
+    #     ]
+    #     edges = [
+    #         {"source": "job1", "target": "job2", "weight": 1}
+    #     ]
+    #     return GraphResponse(nodes=nodes, edges=edges)
+    # except Exception as e:
+    #     raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/skill_graph/", response_model=GraphResponse)
 async def get_skill_graph(job_names: List[str]):
