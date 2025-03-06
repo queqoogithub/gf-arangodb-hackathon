@@ -17,8 +17,6 @@ google_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 client = ArangoClient(hosts=os.getenv("ARANGO_HOST"))
 db = client.db("JOB", username="root", password=os.getenv("ARANGO_PASSWORD"))
 
-selected_job = []
-
 # สร้าง NetworkX DiGraph
 G = nx.DiGraph()
 
@@ -41,6 +39,10 @@ for ec in edge_collections:
 # ตรวจสอบโหนดและ edge
 print(f"Number of nodes: {G.number_of_nodes()}")
 print(f"Number of edges: {G.number_of_edges()}")
+
+class JobSelector:
+    def __init__(self):
+        self.selected_job = []
 
 class Extract_feature(BaseModel):
     job: List[str]
@@ -95,7 +97,7 @@ def extract(nlq: str, verbose=False) -> str:
 def fuzzy_mapping(preprocessed_json: dict, verbose=False):
     all_nodes = {}
     for vc in ["job", "soft_skill", "hard_skill", "interest", "education"]:
-        query = f"FOR doc IN {vc} RETURN doc._key"
+        query = f"FOR doc IN {vc} RETURN doc.name"
         cursor = db.aql.execute(query)
         all_nodes[vc] = [doc for doc in cursor]
 
@@ -138,7 +140,7 @@ def merge_dicts(dict1, dict2):
     
     return merged_dict
 
-def find_children(job, avg_salary, G, user_correct_json):
+def find_children(job, avg_salary, G, user_correct_json, job_selector:JobSelector):
     required = required_for_job(job, G)
     merge_required = merge_dicts(required, user_correct_json)
     results = find_best_job(merge_required, G)
@@ -147,8 +149,8 @@ def find_children(job, avg_salary, G, user_correct_json):
         if len(children) >= 2:
             break
         else:
-            if result['job_key'] not in selected_job and result["attribute"]["average_salary"] > avg_salary:
-                selected_job.append(result['job_key'])
+            if result['job_key'] not in job_selector.selected_job and result["attribute"]["average_salary"] > avg_salary:
+                job_selector.selected_job.append(result['job_key'])
                 children.append({
                     "job": result["attribute"]["job_title"],
                     "min_salary": result["attribute"]["min_salary"],
@@ -178,16 +180,7 @@ def find_best_job(user_input, G):
 
     mapped_node = {}
     for key, att in G.nodes(data=True):
-        if att['type'] == "Job":
-            mapped_node[key] = att['job_title']
-        elif att['type'] == "hard_skill":
-            mapped_node[key] = att['skill_name']
-        elif att['type'] == "soft_skill":
-            mapped_node[key] = att['skill_name']
-        elif att['type'] == "interest":
-            mapped_node[key] = att['interest_name']
-        elif att['type'] == "education":
-            mapped_node[key] = att['education_name']
+        mapped_node[key] = att['name']
     
     for job in job_nodes:
         # ดึง requirements
@@ -213,13 +206,13 @@ def find_best_job(user_input, G):
         user_edu = set(user_input.get("education", []))
         
         # คำนวณ matched และ missing
-        matched_hard = len(user_hard & required_hard_skills)
-        matched_soft = len(user_soft & required_soft_skills)
-        matched_int = len(user_int & required_interests)
-        matched_edu = len(user_edu & required_education)
+        matched_hard = len(user_hard & set(mapped_required_hard_skills))
+        matched_soft = len(user_soft & set(mapped_required_soft_skills))
+        matched_int = len(user_int & set(mapped_required_interests))
+        matched_edu = len(user_edu & set(mapped_required_education))
 
-        missing_hard = len(required_hard_skills - user_hard)
-        missing_soft = len(required_soft_skills - user_soft)
+        missing_hard = len(set(mapped_required_hard_skills) - user_hard)
+        missing_soft = len(set(mapped_required_soft_skills) - user_soft)
         
         # NetworkX Algorithm: In-Degree
         in_degree = G.in_degree(job)  # จำนวน edges เข้า job (hard + soft)
@@ -231,7 +224,7 @@ def find_best_job(user_input, G):
         
         # ดึง attribute ของ job
         job_attribute = {
-            "job_title": G.nodes[job]['job_title'],
+            "job_title": G.nodes[job]['name'],
             "category": G.nodes[job]['category'],
             "job_description": G.nodes[job]['job_description'],
             "min_salary": G.nodes[job]['min_salary'],
@@ -272,19 +265,15 @@ def find_best_job(user_input, G):
 
 # API
 def json_for_graph(user_input:str):
+    job_selector = JobSelector()
     extracted_json = extract(user_input)
     corrected_json = fuzzy_mapping(extracted_json)
     results = find_best_job(corrected_json, G)
     for j in results['all_scores'][:3]:
-        selected_job.append(j['job_key'])
+        job_selector.selected_job.append(j['job_key'])
     json_response = {
         "nlq": user_input,
-        "user_input": {
-            "hard_skill": [G.nodes(data=True)[hs]["skill_name"] for hs in corrected_json["hard_skill"]],
-            "soft_skill": [G.nodes(data=True)[ss]["skill_name"] for ss in corrected_json["soft_skill"]],
-            "interest": [G.nodes(data=True)[it]["interest_name"] for it in corrected_json["interest"]],
-            "education": [G.nodes(data=True)[edu]["education_name"] for edu in corrected_json["education"]]
-        },
+        "user_input": corrected_json,
         "nodes": [{
             "job": r["attribute"]["job_title"],
             "min_salary": r["attribute"]["min_salary"],
@@ -298,7 +287,7 @@ def json_for_graph(user_input:str):
             "soft_skill": r["soft_skill"],
             "interest": r["interest"],
             "education": r["education"],
-            "children": find_children(r["job_key"], r["attribute"]["average_salary"], G, corrected_json)
+            "children": find_children(r["job_key"], r["attribute"]["average_salary"], G, corrected_json, job_selector)
         } for r in results['all_scores'][:3]]
     }
 
