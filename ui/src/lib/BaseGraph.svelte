@@ -64,6 +64,7 @@
     },
   ]);
  
+  let props = $props();
   // const snapGrid = /** @type {[number, number]} */ ([25, 25]);
 </script>
  
@@ -71,7 +72,7 @@
 👇 By default, the Svelte Flow container has a height of 100%.
 This means that the parent container needs a height to render the flow.
 -->
-<!-- <div style:height="500px"> -->
+<!-- <div style:height="50vh"> -->
   <SvelteFlow
     {nodes}
     {edges}
@@ -79,6 +80,7 @@ This means that the parent container needs a height to render the flow.
     connectionLineType={ConnectionLineType.SmoothStep}
     defaultEdgeOptions={{ type: 'smoothstep', animated: true }}
     on:nodeclick={(event) => console.log('on node click', event.detail.node)}
+    {...props}
   >
     <Background variant={BackgroundVariant.Dots} />
     <Controls />
