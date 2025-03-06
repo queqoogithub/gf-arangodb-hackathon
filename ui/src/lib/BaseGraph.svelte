@@ -8,62 +8,14 @@
     ConnectionLineType,
     MiniMap
   } from '@xyflow/svelte';
+  import Modal from '../lib/Modal.svelte';
  
   // 👇 this is important! You need to import the styles for Svelte Flow to work
   import '@xyflow/svelte/dist/style.css';
  
   // We are using writables for the nodes and edges to sync them easily. When a user drags a node for example, Svelte Flow updates its position.
-  // const nodes = writable([
-  //   {
-  //     id: '1',
-  //     type: 'input',
-  //     data: { label: 'Start' },
-  //     position: { x: 200, y: 0 }
-  //   },
-  //   {
-  //     id: '2',
-  //     type: 'default',
-  //     data: { label: 'Supercalifragiliticespiladocious' },
-  //     position: { x: 0, y: 150 }
-  //   },
-  //   {
-  //     id: '3',
-  //     type: 'default',
-  //     data: { label: 'Node 3' },
-  //     position: { x: 200, y: 150 }
-  //   },
-  //   {
-  //     id: '4',
-  //     type: 'default',
-  //     data: { label: 'Node 4' },
-  //     position: { x: 400, y: 150 }
-  //   },
-  //   {
-  //     id: '5',
-  //     type: 'default',
-  //     data: { label: 'Node 5' },
-  //     position: { x: 400, y: 300 }
-  //   }
-  // ]);
  
-  // same for edges
-  const edges = writable([
-    {
-      id: '1-2',
-      // type: 'default',
-      source: '1',
-      target: '2',
-      // label: 'Edge Text'
-    },
-    {
-      id: '1-3',
-      // type: 'default',
-      source: '1',
-      target: '3',
-      // label: 'Edge Text'
-    },
-  ]);
- 
+  let showModal = $state(false);
   let props = $props();
   // const snapGrid = /** @type {[number, number]} */ ([25, 25]);
 </script>
@@ -73,16 +25,55 @@
 This means that the parent container needs a height to render the flow.
 -->
 <!-- <div style:height="50vh"> -->
-  <SvelteFlow
-    {edges}
-    fitView
-    connectionLineType={ConnectionLineType.SmoothStep}
-    defaultEdgeOptions={{ type: 'smoothstep', animated: true }}
-    on:nodeclick={(event) => console.log('on node click', event.detail.node)}
-    {...props}
-  >
-    <Background variant={BackgroundVariant.Dots} />
-    <Controls />
-    <!-- <MiniMap /> -->
-  </SvelteFlow>
+  <fragment>
+    <Modal bind:showModal>
+      <!-- 
+        // job
+        // job description
+        // min - max salary baht
+        // min -  max exp [optional]
+        // level
+        // category
+        // required specialized knowledge
+        // required soft skills
+        // matching interests
+        // required education 
+      -->
+      {#snippet header()}
+        <h2>hello</h2>
+      {/snippet}
+    
+      <ol class="definition-list">
+        <li>of or relating to modality in logic</li>
+        <li>
+          containing provisions as to the mode of procedure or the manner of taking effect —used of a
+          contract or legacy
+        </li>
+        <li>of or relating to a musical mode</li>
+        <li>of or relating to structure as opposed to substance</li>
+        <li>
+          of, relating to, or constituting a grammatical form or category characteristically indicating
+          predication
+        </li>
+        <li>of or relating to a statistical mode</li>
+      </ol>
+    
+      <a href="https://www.merriam-webster.com/dictionary/modal">merriam-webster.com</a>
+    </Modal>
+    <SvelteFlow
+      fitView
+      connectionLineType={ConnectionLineType.SmoothStep}
+      defaultEdgeOptions={{ type: 'smoothstep', animated: true }}
+      on:nodeclick={(event) => {
+        // props.openModal();
+        showModal = true;
+        console.log('on node click', event.detail.node)}
+      }
+      {...props}
+    >
+      <Background variant={BackgroundVariant.Dots} />
+      <Controls />
+      <!-- <MiniMap /> -->
+    </SvelteFlow>
+  </fragment>
 <!-- </div> -->
