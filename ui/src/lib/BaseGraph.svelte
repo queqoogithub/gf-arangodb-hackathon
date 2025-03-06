@@ -13,38 +13,38 @@
   import '@xyflow/svelte/dist/style.css';
  
   // We are using writables for the nodes and edges to sync them easily. When a user drags a node for example, Svelte Flow updates its position.
-  const nodes = writable([
-    {
-      id: '1',
-      type: 'input',
-      data: { label: 'Start' },
-      position: { x: 200, y: 0 }
-    },
-    {
-      id: '2',
-      type: 'default',
-      data: { label: 'Supercalifragiliticespiladocious' },
-      position: { x: 0, y: 150 }
-    },
-    {
-      id: '3',
-      type: 'default',
-      data: { label: 'Node 3' },
-      position: { x: 200, y: 150 }
-    },
-    {
-      id: '4',
-      type: 'default',
-      data: { label: 'Node 4' },
-      position: { x: 400, y: 150 }
-    },
-    {
-      id: '5',
-      type: 'default',
-      data: { label: 'Node 5' },
-      position: { x: 400, y: 300 }
-    }
-  ]);
+  // const nodes = writable([
+  //   {
+  //     id: '1',
+  //     type: 'input',
+  //     data: { label: 'Start' },
+  //     position: { x: 200, y: 0 }
+  //   },
+  //   {
+  //     id: '2',
+  //     type: 'default',
+  //     data: { label: 'Supercalifragiliticespiladocious' },
+  //     position: { x: 0, y: 150 }
+  //   },
+  //   {
+  //     id: '3',
+  //     type: 'default',
+  //     data: { label: 'Node 3' },
+  //     position: { x: 200, y: 150 }
+  //   },
+  //   {
+  //     id: '4',
+  //     type: 'default',
+  //     data: { label: 'Node 4' },
+  //     position: { x: 400, y: 150 }
+  //   },
+  //   {
+  //     id: '5',
+  //     type: 'default',
+  //     data: { label: 'Node 5' },
+  //     position: { x: 400, y: 300 }
+  //   }
+  // ]);
  
   // same for edges
   const edges = writable([
@@ -74,7 +74,6 @@ This means that the parent container needs a height to render the flow.
 -->
 <!-- <div style:height="50vh"> -->
   <SvelteFlow
-    {nodes}
     {edges}
     fitView
     connectionLineType={ConnectionLineType.SmoothStep}
