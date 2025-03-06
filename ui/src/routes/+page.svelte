@@ -14,10 +14,10 @@
   }
 </script>
 
-<main class="mx-auto h-full">
-  <JobGraph />
-<!-- <main class="container"> -->
-  <!-- <nav class="tabs mb-4">
+<!-- <main class="mx-auto h-full">
+  <JobGraph /> -->
+<main class="container mx-auto h-full"> 
+  <nav class="tabs mb-4">
     <button 
       class="tab-button {activeTab === 'jobs' ? 'active' : ''}" 
       on:click={() => setActiveTab('jobs')}
@@ -30,15 +30,15 @@
     >
       Jobs Chat
     </button>
-  </nav> -->
+  </nav>
 
-  <!-- <div class="tab-content"> -->
-    <!-- {#if activeTab === 'jobs'}
+  <div class="tab-content"> 
+    {#if activeTab === 'jobs'}
       <JobGraph />
     {:else}
       <SkillGraph />
-    {/if} -->
-  <!-- </div> -->
+    {/if}
+  </div> 
 </main>
 
 <style>
