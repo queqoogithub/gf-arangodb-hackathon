@@ -96,8 +96,8 @@ def fuzzy_mapping(preprocessed_json: dict):
     return corrected_additional_data
 
 def text_to_aql_to_text(query: str, preprocessed_json: dict):
-    # llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=os.getenv("GOOGLE_API_KEY"))
-    llm = ChatOpenAI(temperature=0, model_name=os.getenv("GPT_MODEL", "gpt-4o-mini"), api_key=os.getenv("OPENAI_API_KEY"))
+    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=os.getenv("GOOGLE_API_KEY"))
+    # llm = ChatOpenAI(temperature=0, model_name=os.getenv("GPT_MODEL", "gpt-4o-mini"), api_key=os.getenv("OPENAI_API_KEY"))
 
     chain = ArangoGraphQAChain.from_llm(
         llm=llm,
