@@ -5,6 +5,7 @@
   import Modal from '../lib/Modal.svelte';
   import { type Node, type Edge } from '@xyflow/svelte';
   import { writable } from 'svelte/store';
+  import type { JobGraphResponse, APINode } from '../types';
 
 
   const xPosInterval = 200;
@@ -17,38 +18,40 @@
   // let graphData: JobAPIResponse;
   let nodes= writable<Node[]>([]);
   let edges = writable<Edge[]>([]);
-  let jobDetails = writable<APINode[]>([]);
+  // let jobDetails = $state<APINode[]>([]);
+  // let jobDetails: APINode[] = [];
+  let jobDetails: {[key: string]: APINode} = {};
 
   /**
  * @type {Error|null} error - Holds the error object if an error occurs, otherwise null.
  */
   let error: Error | null = null;
 
-  type APINode = {
-    job: string;
-    min_salary: number;
-    max_salary: number;
-    min_exp: number;
-    max_exp: number;
-    level: string;
-    category: string;
-    job_description: string;
-    hard_skill: string[];
-    soft_skill: string[];
-    interest: string[];
-    education: string[];
-  };
+  // type APINode = {
+  //   job: string;
+  //   min_salary: number;
+  //   max_salary: number;
+  //   min_exp: number;
+  //   max_exp: number;
+  //   level: string;
+  //   category: string;
+  //   job_description: string;
+  //   hard_skill: string[];
+  //   soft_skill: string[];
+  //   interest: string[];
+  //   education: string[];
+  // };
 
-  type JobGraphResponse = {
-    nlq: string;
-    user_input: {
-      hard_skill: string[];
-      soft_skill: string[];
-      interest: string[];
-      education: string[];
-    }
-    nodes: (APINode & {children: APINode[]})[];
-  };
+  // type JobGraphResponse = {
+  //   nlq: string;
+  //   user_input: {
+  //     hard_skill: string[];
+  //     soft_skill: string[];
+  //     interest: string[];
+  //     education: string[];
+  //   }
+  //   nodes: (APINode & {children: APINode[]})[];
+  // };
 
   async function generateJobGraph() {
     if (!nlQuery.trim()) {
@@ -58,7 +61,8 @@
     
     nodes.set([]);
     edges.set([]);
-    jobDetails.set([]);
+    // jobDetails.set([]);
+    jobDetails = {};
 
     error = null;
     isLoading = true;
@@ -90,7 +94,8 @@
 
       nodes.set(mappedNodes);
       edges.set(mappedEdges);
-      jobDetails.set(mappedJobDetails);
+      // jobDetails.set(mappedJobDetails);
+      jobDetails = mappedJobDetails;
 
     } catch (err) {
       error = (err instanceof Error) ? err : new Error('An unknown error occurred');
@@ -115,10 +120,11 @@
   //     target: '2',
   //   },
 
-  function mapAPINodesToNodesAndEdges(response: JobGraphResponse): {mappedNodes: Node[], mappedEdges: Edge[], mappedJobDetails: APINode[]} {
+  function mapAPINodesToNodesAndEdges(response: JobGraphResponse): {mappedNodes: Node[], mappedEdges: Edge[], mappedJobDetails: {[key: string]: APINode}} {
     const mappedNodes: Node[] = [];
     const mappedEdges: Edge[] = [];
-    const mappedJobDetails: APINode[] = [];
+    // const mappedJobDetails: APINode[] = [];
+    const mappedJobDetails: {[key: string]: APINode} = {};
 
     response?.nodes?.forEach((node, i) => {
       // First layer of nodes
@@ -135,7 +141,8 @@
         target: node.job,
       });
 
-      mappedJobDetails.push(node);
+      mappedJobDetails[node.job] = node;
+      // mappedJobDetails.push(node);
 
       // Since there will only be maximum 2 layers, no need for recursion here.
       // 2nd layer of nodes
@@ -153,7 +160,8 @@
           target: child.job,
         });
 
-        mappedJobDetails.push(node);
+        // mappedJobDetails.push(node);
+        mappedJobDetails[node.job] = node;
       });
     });
 
