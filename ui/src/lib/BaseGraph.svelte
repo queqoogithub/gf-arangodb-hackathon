@@ -14,6 +14,7 @@
   import { Button } from "$lib/components/ui/button";
   import { Label } from "$lib/components/ui/label";
   import { Input } from "$lib/components/ui/input";
+  import { ScrollArea } from "$lib/components/ui/scroll-area";
   import * as Accordion from "$lib/components/ui/accordion";
   import type { JobGraphResponse, APINode } from '../types';
  
@@ -71,7 +72,8 @@ This means that the parent container needs a height to render the flow.
       </ol>
     </Modal> -->
     <Dialog.Root bind:open={showModal}>
-      <Dialog.Content class="sm:max-w-[425px]">
+      <!-- <Dialog.Content class="sm:max-w-[425px]"> -->
+      <Dialog.Content >
         <Dialog.Header>
           <Dialog.Title>{modalData?.job}</Dialog.Title>
           <Dialog.Description>
@@ -85,38 +87,31 @@ This means that the parent container needs a height to render the flow.
             </Accordion.Root>
           </Dialog.Description>
         </Dialog.Header>
-        <div>
-          <p>salary:</p>
-          <p>experience:</p>
-          <p>level:</p>
-          <p>category:</p>
-          <p>specialized knowledge:</p>
-          <p>soft skills:</p>
-          <p>matching interests:</p>
-          <p>education:</p>
-        </div>
-        <!-- <Resizable.PaneGroup direction="horizontal">
-          <Resizable.Pane>
-            <p>salary:</p>
-            <p>experience:</p>
+        <div class="grid grid-cols-2 gap-4 py-4">
+            <p class="font-bold text-left">Salary:</p>
+            <p>{modalData?.min_salary ?? "Unknown"} - {modalData?.max_salary ?? "Unknown"} Baht</p>
             
-          </Resizable.Pane>
-          <Resizable.Handle  />
-          <Resizable.Pane>
-            <p>{modalData?.min_salary ?? "unknown"} - {modalData?.max_salary ?? "unknown"} baht</p>
-            <p>{modalData?.min_exp ?? "unknown"} - {modalData?.max_exp ?? "unknown"} year(s)</p>
-          </Resizable.Pane>
-        </Resizable.PaneGroup> -->
-        <!-- <div class="grid gap-4 py-4">
-          <div class="grid grid-cols-4 items-center gap-4">
-            <Label for="name" class="text-right">Name</Label>
-            <Input id="name" value="Pedro Duarte" class="col-span-3" />
-          </div>
-          <div class="grid grid-cols-4 items-center gap-4">
-            <Label for="username" class="text-right">Username</Label>
-            <Input id="username" value="@peduarte" class="col-span-3" />
-          </div>
-        </div> -->
+            <p class="font-bold text-left">Experience:</p>
+            <p>{modalData?.min_exp ?? "Unknown"} - {modalData?.max_exp ?? "Unknown"} year(s)</p>
+      
+            <p class="font-bold text-left">Level:</p>
+            <p>{modalData?.level ?? "Unknown"}</p>
+      
+            <p class="font-bold text-left">Category:</p>
+            <p>{modalData?.category ?? "Unknown"}</p>
+      
+            <p class="font-bold text-left">Specialized Knowledge:</p>
+            <p class="break-words overflow-wrap-anywhere">{modalData?.hard_skill?.join(', ') ?? "Unknown"}</p>
+      
+            <p class="font-bold text-left">Soft Skills:</p>
+            <p class="break-words overflow-wrap-anywhere">{modalData?.soft_skill?.join(', ') ?? "Unknown"}</p>
+      
+            <p class="font-bold text-left">Matching Interests:</p>
+            <p class="break-words overflow-wrap-anywhere">{modalData?.interest?.join(', ') ?? "Unknown"}</p>
+      
+            <p class="font-bold text-left">Education:</p>
+            <p class="break-words overflow-wrap-anywhere">{modalData?.education?.join(', ') ?? "Unknown"}</p>
+        </div>
         <Dialog.Footer>
           <Button type="submit" on:click={() => showModal = false}>Close</Button>
         </Dialog.Footer>
