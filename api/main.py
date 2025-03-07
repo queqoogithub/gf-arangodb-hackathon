@@ -115,7 +115,7 @@ async def generate_graph(request: GenGraphRequest):
     try:
         response = json_for_graph(request.query)
         # Additional validation if needed beyond Pydantic model validation
-        validate_graph_nodes(response.nodes)
+        validate_graph_nodes(response['nodes'])
         return response
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
@@ -137,7 +137,7 @@ def validate_graph_nodes(nodes: List[GenGraphNode]):
     # Validate each node's children
     for node in nodes:
         if node.children:
-            validate_graph_nodes(node.children)
+            validate_graph_nodes(node['children'])
 
 
 if __name__ == "__main__":
