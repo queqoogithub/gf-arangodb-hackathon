@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, model_validator
 from typing import List, Dict
+import traceback
 
 from gen_graph import json_for_graph
 from chatbot import chatbot
@@ -118,9 +119,9 @@ async def generate_graph(request: GenGraphRequest):
         validate_graph_nodes(response['nodes'])
         return response
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(traceback.format_exc()))
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(traceback.format_exc()))
 
 def validate_graph_nodes(nodes: List[GenGraphNode]):
     """
