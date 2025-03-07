@@ -1,0 +1,379 @@
+    1  git clone https://github.com/queqoogithub/gf-arangodb-hackathon.git
+    2  cd gf-arangodb-hackathon/
+    3  clear
+    4  git branch 
+    5  git branch -a 
+    6  git checkout dev 
+    7  clear
+    8  ls 
+    9  clear
+   10  docker tag go-soft-hack-frontend us-central1-docker.pkg.dev/vertexai1-368814/go-soft-hack/go-soft-hack-frontend:v0.0.1
+   11  cd ui/
+   12  ls
+   13  docker build -t  go-soft-hack-frontend .
+   14  npm --version
+   15  npm install
+   16  git add package-lock.json
+   17  git commit -m "Add package-lock.json"
+   18  docker build -t  go-soft-hack-frontend .
+   19  rm package-lock.json
+   20  npm install
+   21  RUN npm ci --legacy-peer-deps
+   22  npm ci --legacy-peer-deps
+   23  docker build -t  go-soft-hack-frontend .
+   24  docker tag go-soft-hack-frontend us-central1-docker.pkg.dev/vertexai1-368814/go-soft-hack/go-soft-hack-frontend:v0.0.1
+   25  docker images
+   26  docker ps
+   27  docker tag go-soft-hack-frontend us-central1-docker.pkg.dev/vertexai1-368814/go-soft-hack/go-soft-hack-frontend:v0.0.1
+   28  docker push us-central1-docker.pkg.dev/vertexai1-814/go-soft-hack/my-app:v0.0.1
+   29  docker images
+   30  docker push us-central1-docker.pkg.dev/vertexai1-814/go-soft-hack/go-soft-hack-frontend:v0.0.1
+   31  docker push us-central1-docker.pkg.dev/vertexai1-368814/go-soft-hack/go-soft-hack-frontend:v0.0.1
+   32  ls
+   33  source sh.sh 
+   34  cd gf-arangodb-hackathon/
+   35  ls
+   36  cd ui/
+   37  clear
+   38  ls
+   39  rm -rf node_modules package-lock.json
+   40  npm install
+   41  npm install rollup --save-dev
+   42  ls
+   43  source sh.sh 
+   44  docker images
+   45  docker ps 
+   46  source sh.sh 
+   47  docker images
+   48  docker rm bb3063612260
+   49  docker rmi bb3063612260
+   50  docker images
+   51  echo $IMAGES
+   52  export IMAGE="us-central1-docker.pkg.dev/vertexai1-368814/go-soft-hack/go-soft-hack-frontend:v$VER"
+   53  echo $IMAGES
+   54  export SERVICE_NAME="go-soft-hack"
+   55  export IMAGE="us-central1-docker.pkg.dev/vertexai1-368814/go-soft-hack/go-soft-hack-frontend:v0.0.2"
+   56  export REGION="us-central1"
+   57  echo $REGION
+   58  echo $IMAGE
+   59  docker images 
+   60  docker tag 
+   61  source sh.sh
+   62  source push.sh 
+   63  gcloud auth list 
+   64  source push.sh 
+   65  gcloud iam service-accounts add-iam-policy-binding go-soft-hack-3@vertexai1-368814.iam.gserviceaccount.com     --member="user:jiissee@gmail.com"     --role="roles/iam.serviceAccountUser"
+   66  gcloud iam service-accounts get-iam-policy go-soft-hack-3@vertexai1-368814.iam.gserviceaccount.com
+   67  gcloud projects get-iam-policy vertexai1-368814
+   68  gcloud iam service-accounts list --project=vertexai1-368814
+   69  source push
+   70  ls
+   71  cd gf-arangodb-hackathon/
+   72  cd ui/
+   73  clear
+   74  ls
+   75  source push.sh 
+   76  curl https://go-soft-hacx71091.us-central1.run.app
+   77  source build.sh 
+   78  source push.sh 
+   79  ls static/favicon.png 
+   80  cd static/
+   81  ls
+   82  cp favicon.png favicon.ico
+   83  ls
+   84  cd ..
+   85  source sh.sh 
+   86  cd ..
+   87  cd api/
+   88  clear
+   89  cd ..
+   90  source api/sh.sh 
+   91  docker images
+   92  docker rmp bd36ed07c567 a281e3f73a09 b9e50c28616a
+   93  docker rmp bd36ed07c567 
+   94  docker rmi bd36ed07c567 
+   95  docker iamges
+   96  docker rmi
+   97  docker images
+   98  docker rmi b9e50c28616a a281e3f73a09
+   99  docker images 
+  100  source api/sh.sh 
+  101  cd api/
+  102  source sh.sh 
+  103  gcloud auth configure-docker 
+  104  source sh.sh 
+  105  gcloud auth list 
+  106  gcloud auth list docker images
+  107  docker images
+  108  docker rmi d4396d4fa760 d4396d4fa760 8fc9fadeeee7
+  109  docker images
+  110  docker rmi ab50a4ddef09
+  111  docker images 
+  112  source sh.sh 
+  113  docker images 
+  114  source sh.sh 
+  115  gcloud auth list 
+  116  docker images 
+  117  gcloud projects add-iam-policy-binding vertexai1-368814   --member="user:jiissee@gmail.com"   --role="roles/artifactregistry.writer"
+  118  gcloud config set account jiissee@gmail.com
+  119  source sh.sh 
+  120  export VERSION="0.0.4"
+  121  BE_SERVICE_NAME="go-soft-hack-api"
+  122  BE_IMAGE="us-central1-docker.pkg.dev/vertexai1-368814/go-soft-hack/go-soft-hack-backend:$VERSION"
+  123  REGION="us-central1"
+  124  echo $REGION
+  125  echo $BE_IMAGE
+  126  echo $BE_SERVICE_NAME
+  127  docker image
+  128  docker images 
+  129  clear
+  130  source sh.sh 
+  131  echo $BE_IMAGE
+  132  source sh.sh 
+  133  gcloud components update 
+  134  gcloud projects add-iam-policy-binding vertexai1-368814   --member="user:jiissee@gmail.com"   --role="roles/artifactregistry.writer"
+  135  source sh.sh 
+  136  echo $BE_IMAGE
+  137  gcloud auth list 
+  138  gcloud projects add-iam-policy-binding vertexai1-368814   --member="user:jiissee@gmail.com"   --role="roles/artifactregistry.writer"
+  139  gcloud info --run-diagnostics
+  140  source sh.sh 
+  141  cd ..
+  142  cd ui/
+  143  source sh.sh 
+  144  cd ..
+  145  cd aiml
+  146  cd api/
+  147  clear
+  148  source sh.sh 
+  149  cd ..
+  150  cd ui/
+  151  source sh.sh 
+  152  docker images
+  153  docker push us-central1-docker.pkg.dev/vertexai1-368814/go-soft-hack/go-soft-hack-frontend:0.0.4
+  154  gcloud info --run-diagnostics
+  155  gcloud init
+  156  gcloud auth list 
+  157  cd gf-arangodb-hackathon/
+  158  clear
+  159  ls
+  160  cd api/
+  161  source sh.sh 
+  162  cd ..
+  163  cd ui/
+  164  source sh.sh 
+  165  clear
+  166  source sh.sh 
+  167  gcloud auth configure-docker
+  168  source sh.sh 
+  169  source sh.sh gcloud auth configure-docker
+  170  gcloud auth configure-docker
+  171  source sh.sh 
+  172  gcloud auth configure-docker
+  173  gcloud auth configure-dockergcloud auth configure-docker
+  174  gcloud auth list
+  175  gcloud config set account jiissee@gmail.com
+  176  gcloud auth list
+  177  gcloud uaht login jiissee@gmail.com
+  178  gcloud auht login jiissee@gmail.com
+  179  gcloud auth login
+  180  gcloud auth list
+  181  source sh.sh 
+  182  cd ..
+  183  cd api/
+  184  source sh.sh 
+  185  clear
+  186  ls
+  187  source sh.sh 
+  188  docker images 
+  189  cat sh.sh 
+  190  source sh.sh 
+  191  echo $VERSION
+  192  echo $BE_VERSION
+  193  echo $BE_IMAGE
+  194  source sh.sh
+  195  clear
+  196  source sh.sh 
+  197  curl https://go-soft-hack-api-343673271091.us-central1.run.app
+  198  cd ..
+  199  cd ui/
+  200  clear
+  201  ls
+  202  source sh.sh 
+  203  [A
+  204  source sh.sh 
+  205  clear
+  206  ls
+  207  pwd
+  208  clear
+  209  ls
+  210  cat Dockerfile 
+  211  git status
+  212  source sh.sh 
+  213  docker images
+  214  source sh.sh 
+  215  docker images 
+  216  echo $FE_IMAGE
+  217  docker push $FE_IMAGE
+  218  gcloud run deploy $FE_SERVICE_NAME     --image=$FE_IMAGE     --region=$FE_REGION     --allow-unauthenticated     --min-instances=$MIN     --max-instances=$MAX     --service-account=$SA
+  219  source sh.sh 
+  220  npx sv@0.6.7 create helloworld
+  221  cd ..
+  222  npx sv@0.6.7 create helloworld
+  223  ls
+  224  cd helloworld/
+  225  ls
+  226  gcloud run deploy --source .
+  227  cle3ar
+  228  clear
+  229  cd ..
+  230  clear
+  231  ls
+  232  cd gf-arangodb-hackathon/
+  233  clear
+  234  ls
+  235  cd ui/
+  236  clear
+  237  source sh.sh 
+  238  clear
+  239  ls
+  240  ls -l
+  241  gcloud run deploy --source .
+  242  cd ..
+  243  clear
+  244  cd ui/
+  245  clear
+  246  ls
+  247  source sh.sh 
+  248  npm install
+  249  source sh.sh 
+  250  cd api
+  251  cd ..
+  252  cd api
+  253  source sh.sh 
+  254  cd ..
+  255  curl https://go-soft-hack-api-343673271091.us-central1.run.app
+  256  curl https://go-soft-hack-api-343673271091.us-central1.run.app/
+  257  ping  https://go-soft-hack-api-343673271091.us-central1.run.app/
+  258  curl https://go-soft-hack-api-343673271091.us-central1.run.app
+  259  clear
+  260  cd gf-arangodb-hackathon/
+  261  clear
+  262  ls
+  263  cd api/
+  264  clear
+  265  ls
+  266  source sh.sh 
+  267  clear
+  268  cd ..
+  269  clear
+  270  ls -l
+  271  git clone https://github.com/queqoogithub/gf-arangodb-hackathon.git
+  272  clear
+  273  cd gf-arangodb-hackathon/
+  274  clear
+  275  git branch 
+  276  git checkout dev 
+  277  clear
+  278  ls
+  279  cd api/
+  280  clear
+  281  ls
+  282  source sh.sh 
+  283  cd ..
+  284  cd ui/
+  285  source sh.sh 
+  286  npm install
+  287  source sh.sh 
+  288  npm install
+  289  npm install -f
+  290  npm i --force 
+  291  npm install force 
+  292  source sh.sh 
+  293  npm install force
+  294  source sh.sh 
+  295  npm install 
+  296  source sh.sh 
+  297  clear
+  298  npm install
+  299  source sh.sh
+  300  npm install
+  301  source sh.sh
+  302  npm install
+  303  source sh.sh
+  304  nmp -version
+  305  npm version
+  306  source sh.sh
+  307  gcloud auth list 
+  308  source sh.sh
+  309  clear
+  310  ls
+  311  clear
+  312  cd ..
+  313  cd api/
+  314  clear
+  315  ls
+  316  source sh.sh 
+  317  git status
+  318  git branch 
+  319  git checkout -b dev-tn
+  320  git add .;git commit -m 'try to deploy version 3/8/25'
+  321  git config --global user.email jiissee@gmail.com
+  322  git config --global user.name jiissee
+  323  git add .;git commit -m 'try to deploy version 3/8/25'
+  324  git push origin dev-tn
+  325  cd ..
+  326  git pull origin dev-tn
+  327  git status
+  328  clear
+  329  git log --oneline
+  330  git status
+  331  git diff
+  332  clear
+  333  git status
+  334  git diff
+  335  git status
+  336  git add .;git 
+  337  git add .
+  338  git commit -m 'review'
+  339  git branch 
+  340  git stauts
+  341  git status
+  342  git push origin dev-tn 
+  343  git status
+  344  clear
+  345  git status
+  346  git pull origin dev-tn
+  347  git status
+  348  git log --oneline
+  349  cd api/
+  350  clear
+  351  ls
+  352  cat sh.sh 
+  353  source sh.sh 
+  354  gcloud auth list 
+  355  cat sh.sh 
+  356  source sh.sh 
+  357  gcloud auth configure-docker
+  358  source sh.sh 
+  359  gcloud auth list 
+  360  gcloud auth login
+  361  source sh.sh 
+  362  cd ..
+  363  cd ui/
+  364  source sh.sh 
+  365  clear
+  366  source sh.sh 
+  367  cd ..
+  368  git pull origin dev-tn
+  369  cd ui/
+  370  source sh.sh 
+  371  cd ..
+  372  cd api/
+  373  source sh.sh 
+  374  history
+  375  history > history.txt 
+
+
+https://cloud.google.com/shell/docs/using-cloud-shell
+
