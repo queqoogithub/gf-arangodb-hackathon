@@ -17,7 +17,7 @@
     responseText = '';
     
     try {
-      const chatResponse = await fetch('https://go-soft-hack-api-10-343673271091.us-central1.run.app/chat/', {
+      const chatResponse = await fetch('https://go-soft-hack-api-10-343673271091.us-central1.run.app/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
