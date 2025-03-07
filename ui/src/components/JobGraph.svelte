@@ -37,7 +37,7 @@
     isLoading = true;
     
     try {
-      const response = await fetch('https://go-soft-hack-api-9-343673271091.us-central1.run.app/gen_graph', {
+      const response = await fetch('https://go-soft-hack-api-10-343673271091.us-central1.run.app/gen_graph/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
