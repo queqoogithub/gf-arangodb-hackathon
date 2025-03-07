@@ -123,7 +123,7 @@ async def generate_graph(request: GenGraphRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(traceback.format_exc()))
 
-def validate_graph_nodes(nodes: List[GenGraphNode]):
+def validate_graph_nodes(nodes: List[Dict]):
     """
     Additional validation for graph nodes beyond the Pydantic model validation.
     """
@@ -137,7 +137,7 @@ def validate_graph_nodes(nodes: List[GenGraphNode]):
     
     # Validate each node's children
     for node in nodes:
-        if node['children']:
+        if 'children' in node and node['children']:
             validate_graph_nodes(node['children'])
 
 
