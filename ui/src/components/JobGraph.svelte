@@ -37,12 +37,12 @@
     isLoading = true;
     
     try {
-      const response = await fetch('http://localhost:8000/job_graph', {
+      const response = await fetch('https://go-soft-hack-api-9-343673271091.us-central1.run.app/gen_graph', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ queries: [nlQuery] })
+        body: JSON.stringify({ query: nlQuery })
       });
       
       if (!response.ok) {

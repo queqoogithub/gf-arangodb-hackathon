@@ -48,7 +48,7 @@ class ChatbotRequest(BaseModel):
 class ChatbotResponse(BaseModel):
     response: str
 
-@app.post("/chat/", response_model=ChatbotResponse)
+@app.post("/chat", response_model=ChatbotResponse)
 async def chat_endpoint(request: ChatbotRequest):
     """
     Process a chat query and return the response from the chatbot.
@@ -59,10 +59,9 @@ async def chat_endpoint(request: ChatbotRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # SvelteKit dev server
+    allow_origins=["http://localhost:5173", "https://go-soft-hack-ui-9-343673271091.us-central1.run.app"],  # SvelteKit dev server
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -104,30 +103,11 @@ class GraphResponse(BaseModel):
     nodes: List[Dict]
     edges: List[Dict]
 
-@app.post("/job_graph/", response_model=GenGraphResponse)
-async def create_job_graph(request: NLQRequest):
-    """
-    Create a job graph based on natural language queries.
-    """
-    try:
-        return json_for_graph(request.queries[0])
-    except Exception as e:
-        print(e)
-        raise HTTPException(status_code=500, detail=str(e))
-    # try:
-    #     # Mock implementation - replace with actual logic
-    #     nodes = [
-    #         {"id": "job1", "label": request.queries[0]},
-    #         {"id": "job2", "label": "Related Job"}
-    #     ]
-    #     edges = [
-    #         {"source": "job1", "target": "job2", "weight": 1}
-    #     ]
-    #     return GraphResponse(nodes=nodes, edges=edges)
-    # except Exception as e:
-    #     raise HTTPException(status_code=500, detail=str(e))
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
 
-@app.post("/gen_graph/", response_model=GenGraphResponse)
+@app.post("/gen_graph", response_model=GenGraphResponse)
 async def generate_graph(request: GenGraphRequest):
     """
     Generate a job skills graph based on user input query.
