@@ -15,43 +15,12 @@
   let isLoading = false;
 
   let graphData: JobGraphResponse;
-  // let graphData: JobAPIResponse;
   let nodes= writable<Node[]>([]);
   let edges = writable<Edge[]>([]);
-  // let jobDetails = $state<APINode[]>([]);
-  // let jobDetails: APINode[] = [];
-  let jobDetails: {[key: string]: APINode} = {};
-
-  /**
- * @type {Error|null} error - Holds the error object if an error occurs, otherwise null.
- */
+  // let jobDetails: {[key: string]: APINode} = {};
+  // let jobDetails: {[key: string]: APINode} = $state({});
+  let jobDetails = writable<{[key: string]: APINode}>({});
   let error: Error | null = null;
-
-  // type APINode = {
-  //   job: string;
-  //   min_salary: number;
-  //   max_salary: number;
-  //   min_exp: number;
-  //   max_exp: number;
-  //   level: string;
-  //   category: string;
-  //   job_description: string;
-  //   hard_skill: string[];
-  //   soft_skill: string[];
-  //   interest: string[];
-  //   education: string[];
-  // };
-
-  // type JobGraphResponse = {
-  //   nlq: string;
-  //   user_input: {
-  //     hard_skill: string[];
-  //     soft_skill: string[];
-  //     interest: string[];
-  //     education: string[];
-  //   }
-  //   nodes: (APINode & {children: APINode[]})[];
-  // };
 
   async function generateJobGraph() {
     if (!nlQuery.trim()) {
@@ -61,8 +30,8 @@
     
     nodes.set([]);
     edges.set([]);
-    // jobDetails.set([]);
-    jobDetails = {};
+    jobDetails.set({});
+    // jobDetails = {};
 
     error = null;
     isLoading = true;
@@ -94,8 +63,8 @@
 
       nodes.set(mappedNodes);
       edges.set(mappedEdges);
-      // jobDetails.set(mappedJobDetails);
-      jobDetails = mappedJobDetails;
+      jobDetails.set(mappedJobDetails);
+      // jobDetails = mappedJobDetails;
 
     } catch (err) {
       error = (err instanceof Error) ? err : new Error('An unknown error occurred');
@@ -161,7 +130,7 @@
         });
 
         // mappedJobDetails.push(node);
-        mappedJobDetails[node.job] = node;
+        mappedJobDetails[child.job] = child;
       });
     });
 
