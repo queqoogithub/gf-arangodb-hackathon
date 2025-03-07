@@ -130,13 +130,13 @@ def validate_graph_nodes(nodes: List[GenGraphNode]):
         raise ValueError("Graph must contain at least one node")
     
     # Check for duplicate job titles
-    job_titles = [node.job for node in nodes]
+    job_titles = [node['job'] for node in nodes]
     if len(job_titles) != len(set(job_titles)):
         raise ValueError("Job titles must be unique at each level of the graph")
     
     # Validate each node's children
     for node in nodes:
-        if node.children:
+        if node['children']:
             validate_graph_nodes(node['children'])
 
 
