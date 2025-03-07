@@ -26,6 +26,7 @@
 		"tailwind-variants": "^0.3.1",
 		"tailwindcss": "^3.4.9",
 		"typescript": "^5.0.0",
+		"vaul-svelte": "^0.3.2",
 		"vite": "^6.0.0"
 	},
 	"dependencies": {

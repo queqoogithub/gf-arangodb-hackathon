@@ -15,6 +15,7 @@
   import { Label } from "$lib/components/ui/label";
   import { Input } from "$lib/components/ui/input";
   import { ScrollArea } from "$lib/components/ui/scroll-area";
+  import * as Sheet from "$lib/components/ui/sheet";
   import * as Accordion from "$lib/components/ui/accordion";
   import type { JobGraphResponse, APINode } from '../types';
  
@@ -33,18 +34,13 @@
     const jobDetails = get<{ [key: string]: APINode }>(props.jobDetails);
 
     const jobDetail = jobDetails[nodeLabel];
-    console.dir($state.snapshot(props.jobDetails))
-    console.log(jobDetail)
-    // $inspect(props.jobDetails)
 
     if (jobDetail != null) {
       modalData = jobDetail;
+      showModal = true;
     }
-
-    showModal = true;
   }
 
-  // const snapGrid = /** @type {[number, number]} */ ([25, 25]);
 </script>
  
 <!--
@@ -53,26 +49,55 @@ This means that the parent container needs a height to render the flow.
 -->
 <!-- <div style:height="50vh"> -->
   <fragment>
-    <!-- <Modal bind:showModal>
-      {#snippet header()}
-        <h2>{modalData?.job}</h2>
-      {/snippet}
-    
-      <ol class="definition-list">
-        <li>description: {modalData?.job_description}</li>
-        <li>salary: {modalData?.min_salary ?? "unknown"} - {modalData?.max_salary ?? "unknown"} baht</li>
-        <li>experience: {modalData?.min_exp ?? "unknown"} - {modalData?.max_exp ?? "unknown"} year(s)</li>
+    <Sheet.Root bind:open={showModal} >
+      <Sheet.Content class="overflow-auto">
+        <Sheet.Header>
+          <Sheet.Title>{modalData?.job}</Sheet.Title>
+          <Sheet.Description>
+            <Accordion.Root>
+              <Accordion.Item value="item-1">
+                <Accordion.Trigger>Job Description</Accordion.Trigger>
+                <Accordion.Content>
+                  {modalData?.job_description}
+                </Accordion.Content>
+              </Accordion.Item>
+            </Accordion.Root>
+          </Sheet.Description>
+        </Sheet.Header>
+        <!-- <div class="max-h-[60vh] overflow-y-auto"> -->
+          <div class="grid grid-cols-2 gap-4 py-4">
+              <Label class="font-bold text-left">Salary:</Label>
+              <p>{modalData?.min_salary ?? "Unknown"} - {modalData?.max_salary ?? "Unknown"} Baht</p>
+              
+              <Label class="font-bold text-left">Experience:</Label>
+              <p>{modalData?.min_exp ?? "Unknown"} - {modalData?.max_exp ?? "Unknown"} year(s)</p>
+        
+              <Label class="font-bold text-left">Level:</Label>
+              <p>{modalData?.level ?? "Unknown"}</p>
+        
+              <Label class="font-bold text-left">Category:</Label>
+              <p>{modalData?.category ?? "Unknown"}</p>
+        
+              <Label class="font-bold text-left">Specialized Knowledge:</Label>
+              <p class="break-words overflow-wrap-anywhere">{modalData?.hard_skill?.join(', ') ?? "Unknown"}</p>
+        
+              <Label class="font-bold text-left">Soft Skills:</Label>
+              <p class="break-words overflow-wrap-anywhere">{modalData?.soft_skill?.join(', ') ?? "Unknown"}</p>
+        
+              <Label class="font-bold text-left">Matching Interests:</Label>
+              <p class="break-words overflow-wrap-anywhere">{modalData?.interest?.join(', ') ?? "Unknown"}</p>
+        
+              <Label class="font-bold text-left">Education:</Label>
+              <p class="break-words overflow-wrap-anywhere">{modalData?.education?.join(', ') ?? "Unknown"}</p>
+          </div>
+        <!-- </div> -->
+        <!-- <Sheet.Footer>
+          <Button type="submit" on:click={() => showModal = false}>Close</Button>
+        </Sheet.Footer> -->
+      </Sheet.Content>
+    </Sheet.Root>
 
-        <li>level: {modalData?.level}</li>
-        <li>category: {modalData?.category}</li>
-        <li>required specialized knowledge: {modalData?.hard_skill}</li>
-        <li>required soft skills: {modalData?.soft_skill}</li>
-        <li>matching interests: {modalData?.interest}</li>
-        <li>required education: {modalData?.education}</li>
-      </ol>
-    </Modal> -->
-    <Dialog.Root bind:open={showModal}>
-      <!-- <Dialog.Content class="sm:max-w-[425px]"> -->
+    <!-- <Dialog.Root bind:open={showModal} >
       <Dialog.Content >
         <Dialog.Header>
           <Dialog.Title>{modalData?.job}</Dialog.Title>
@@ -87,36 +112,38 @@ This means that the parent container needs a height to render the flow.
             </Accordion.Root>
           </Dialog.Description>
         </Dialog.Header>
-        <div class="grid grid-cols-2 gap-4 py-4">
-            <p class="font-bold text-left">Salary:</p>
-            <p>{modalData?.min_salary ?? "Unknown"} - {modalData?.max_salary ?? "Unknown"} Baht</p>
-            
-            <p class="font-bold text-left">Experience:</p>
-            <p>{modalData?.min_exp ?? "Unknown"} - {modalData?.max_exp ?? "Unknown"} year(s)</p>
-      
-            <p class="font-bold text-left">Level:</p>
-            <p>{modalData?.level ?? "Unknown"}</p>
-      
-            <p class="font-bold text-left">Category:</p>
-            <p>{modalData?.category ?? "Unknown"}</p>
-      
-            <p class="font-bold text-left">Specialized Knowledge:</p>
-            <p class="break-words overflow-wrap-anywhere">{modalData?.hard_skill?.join(', ') ?? "Unknown"}</p>
-      
-            <p class="font-bold text-left">Soft Skills:</p>
-            <p class="break-words overflow-wrap-anywhere">{modalData?.soft_skill?.join(', ') ?? "Unknown"}</p>
-      
-            <p class="font-bold text-left">Matching Interests:</p>
-            <p class="break-words overflow-wrap-anywhere">{modalData?.interest?.join(', ') ?? "Unknown"}</p>
-      
-            <p class="font-bold text-left">Education:</p>
-            <p class="break-words overflow-wrap-anywhere">{modalData?.education?.join(', ') ?? "Unknown"}</p>
+        <div class="max-h-[60vh] overflow-y-auto">
+          <div class="grid grid-cols-2 gap-4 py-4">
+              <Label class="font-bold text-left">Salary:</Label>
+              <p>{modalData?.min_salary ?? "Unknown"} - {modalData?.max_salary ?? "Unknown"} Baht</p>
+              
+              <Label class="font-bold text-left">Experience:</Label>
+              <p>{modalData?.min_exp ?? "Unknown"} - {modalData?.max_exp ?? "Unknown"} year(s)</p>
+        
+              <Label class="font-bold text-left">Level:</Label>
+              <p>{modalData?.level ?? "Unknown"}</p>
+        
+              <Label class="font-bold text-left">Category:</Label>
+              <p>{modalData?.category ?? "Unknown"}</p>
+        
+              <Label class="font-bold text-left">Specialized Knowledge:</Label>
+              <p class="break-words overflow-wrap-anywhere">{modalData?.hard_skill?.join(', ') ?? "Unknown"}</p>
+        
+              <Label class="font-bold text-left">Soft Skills:</Label>
+              <p class="break-words overflow-wrap-anywhere">{modalData?.soft_skill?.join(', ') ?? "Unknown"}</p>
+        
+              <Label class="font-bold text-left">Matching Interests:</Label>
+              <p class="break-words overflow-wrap-anywhere">{modalData?.interest?.join(', ') ?? "Unknown"}</p>
+        
+              <Label class="font-bold text-left">Education:</Label>
+              <p class="break-words overflow-wrap-anywhere">{modalData?.education?.join(', ') ?? "Unknown"}</p>
+          </div>
         </div>
         <Dialog.Footer>
           <Button type="submit" on:click={() => showModal = false}>Close</Button>
         </Dialog.Footer>
       </Dialog.Content>
-    </Dialog.Root>
+    </Dialog.Root> -->
 
     <SvelteFlow
       fitView
