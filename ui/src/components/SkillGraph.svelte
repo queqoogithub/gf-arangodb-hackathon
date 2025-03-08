@@ -68,16 +68,16 @@
         <strong>Here are some examples of what you can ask:</strong>
       </p>
       <ul class="pl-4 pb-2">
-        <li>
+        <li class="mb-1">
           ✅ What jobs can I do with these skills: Python, data analysis,
           problem-solving?
         </li>
-        <li>✅ What skills do I need to become an AI Engineer?</li>
-        <li>
+        <li class="mb-1">✅ What skills do I need to become an AI Engineer?</li>
+        <li class="mb-1">
           ✅ I have a Bachelor in Computer Science. What careers are suitable
           for me?
         </li>
-        <li>✅ I’m interested in Gaming. What are some career options?</li>
+        <li class="mb-1">✅ I’m interested in Gaming. What are some career options?</li>
       </ul>
       <p>
         💡 Be specific! The more details you provide, the better recommendations
