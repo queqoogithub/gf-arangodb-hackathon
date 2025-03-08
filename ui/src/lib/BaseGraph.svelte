@@ -96,54 +96,6 @@ This means that the parent container needs a height to render the flow.
       </Sheet.Content>
     </Sheet.Root>
 
-    <!-- <Dialog.Root bind:open={showModal} >
-      <Dialog.Content >
-        <Dialog.Header>
-          <Dialog.Title>{modalData?.job}</Dialog.Title>
-          <Dialog.Description>
-            <Accordion.Root>
-              <Accordion.Item value="item-1">
-                <Accordion.Trigger>Job Description</Accordion.Trigger>
-                <Accordion.Content>
-                  {modalData?.job_description}
-                </Accordion.Content>
-              </Accordion.Item>
-            </Accordion.Root>
-          </Dialog.Description>
-        </Dialog.Header>
-        <div class="max-h-[60vh] overflow-y-auto">
-          <div class="grid grid-cols-2 gap-4 py-4">
-              <Label class="font-bold text-left">Salary:</Label>
-              <p>{modalData?.min_salary ?? "Unknown"} - {modalData?.max_salary ?? "Unknown"} Baht</p>
-              
-              <Label class="font-bold text-left">Experience:</Label>
-              <p>{modalData?.min_exp ?? "Unknown"} - {modalData?.max_exp ?? "Unknown"} year(s)</p>
-        
-              <Label class="font-bold text-left">Level:</Label>
-              <p>{modalData?.level ?? "Unknown"}</p>
-        
-              <Label class="font-bold text-left">Category:</Label>
-              <p>{modalData?.category ?? "Unknown"}</p>
-        
-              <Label class="font-bold text-left">Specialized Knowledge:</Label>
-              <p class="break-words overflow-wrap-anywhere">{modalData?.hard_skill?.join(', ') ?? "Unknown"}</p>
-        
-              <Label class="font-bold text-left">Soft Skills:</Label>
-              <p class="break-words overflow-wrap-anywhere">{modalData?.soft_skill?.join(', ') ?? "Unknown"}</p>
-        
-              <Label class="font-bold text-left">Matching Interests:</Label>
-              <p class="break-words overflow-wrap-anywhere">{modalData?.interest?.join(', ') ?? "Unknown"}</p>
-        
-              <Label class="font-bold text-left">Education:</Label>
-              <p class="break-words overflow-wrap-anywhere">{modalData?.education?.join(', ') ?? "Unknown"}</p>
-          </div>
-        </div>
-        <Dialog.Footer>
-          <Button type="submit" on:click={() => showModal = false}>Close</Button>
-        </Dialog.Footer>
-      </Dialog.Content>
-    </Dialog.Root> -->
-
     <SvelteFlow
       fitView
       connectionLineType={ConnectionLineType.SmoothStep}

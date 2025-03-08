@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import * as Tabs from "$lib/components/ui/tabs";
   import JobGraph from '../components/JobGraph.svelte';
   import SkillGraph from '../components/SkillGraph.svelte';
 
@@ -12,12 +13,43 @@
   function setActiveTab(tab) {
     activeTab = tab;
   }
+
+  const jobTab = "Visualize Careers";
+  const chatTab = "Career Chat";
 </script>
 
 <!-- <main class="mx-auto h-full">
   <JobGraph /> -->
-<main class="container mx-auto h-full"> 
-  <nav class="tabs mb-4">
+<!-- <main class="container mx-auto h-full">  -->
+<main class="mx-auto h-full"> 
+  <JobGraph />
+  <!-- <header class="border-border/40 bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
+    <div class="container flex h-14 max-w-screen-2xl items-center">
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="/" class="hover:text-foreground/80 transition-colors text-foreground/60">
+          {jobTab}
+        </a>
+        <a href="/chat" class="hover:text-foreground/80 transition-colors text-foreground/60">
+          {chatTab}
+        </a>
+      </nav>
+    </div>
+  </header> -->
+    <!-- <Tabs.Root value="jobs" class="space-y-4">
+      <Tabs.List>
+        <Tabs.Trigger value="jobs">{jobTab}</Tabs.Trigger>
+        <Tabs.Trigger value="skills">{chatTab}</Tabs.Trigger>
+      </Tabs.List>
+      <Tabs.Content value="jobs">
+        <JobGraph />
+      </Tabs.Content>
+      <Tabs.Content value="skills">
+        <SkillGraph />
+      </Tabs.Content>
+    </Tabs.Root> -->
+
+  
+  <!-- <nav class="tabs mb-4">
     <button 
       class="tab-button {activeTab === 'jobs' ? 'active' : ''}" 
       on:click={() => setActiveTab('jobs')}
@@ -38,7 +70,7 @@
     {:else}
       <SkillGraph />
     {/if}
-  </div> 
+  </div>  -->
 </main>
 
 <style>
