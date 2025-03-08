@@ -58,7 +58,7 @@
         disabled={isLoading}
         class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 disabled:bg-gray-400"
       >
-        {isLoading ? 'Loading...' : 'Generate'}
+        {isLoading ? 'Loading...' : 'Explore'}
       </button>
     </div>
     {#if error}
@@ -73,7 +73,7 @@
         <div class="text-gray-700 prose prose-orange prose-sm max-w-none">{@html formattedResponse}</div>
       {:else}
         <div class="flex items-center justify-center h-full text-gray-400">
-          Enter your job interests and skills, then click Generate to see the analysis
+          Enter your job interests and skills, then click Explore to see the analysis
         </div>
       {/if}
     </div>
