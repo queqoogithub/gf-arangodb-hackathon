@@ -16,8 +16,10 @@
   import { writable } from 'svelte/store';
   import type { JobGraphResponse, APINode } from '../types';
   import Label from '../lib/components/ui/label/label.svelte';
+  import * as Card from "$lib/components/ui/card";
   import Button from '../lib/components/ui/button/button.svelte';
   import Input from '../lib/components/ui/input/input.svelte';
+  // import Card from '../lib/components/ui/card/card.svelte';
   // import { superForm, type Infer, type SuperValidated } from 'sveltekit-superforms';
   // import LoaderCircle from "lucide-svelte/icons/loader-circle";
   // import { LoaderCircle } from '@lucide/svelte';
@@ -197,138 +199,119 @@
 <main class="min-h-full max-w-5xl bg-background p-8 mx-auto">
   <!-- <h2 class="text-xl font-bold text-blue-500 mb-4">Jobs Graph</h2> -->
   
-  <section class="min-h-full rounded-md mb-8">
-    <!-- <form on:submit={generateJobGraph}>
-      <Label for="job-graph-query">What Are You Passionate About?</Label>
-      <div class="flex w-full items-center space-x-2">
-        <Input 
-        id="job-graph-query"
-        bind:value={nlQuery}
-        placeholder="I like to paint and I know how to code"
-        class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
-        />
-        <Button
-          onclick={generateJobGraph}
-          disabled={isLoading}
-          class="bg-lime-600 text-stone-50 px-4 py-2 rounded-md hover:bg-lime-700 disabled:bg-stone-400"
-        >
-          {isLoading ? 'Loading...' : 'Explore'}
-        </Button>
-      </div>
-    </form> -->
-
-    <form on:submit={generateJobGraph}>
-      <!-- <Label for="job-graph-query">What Are You Passionate About?</Label> -->
-      <h2 class="text-center font-medium text-stone-700 mb-2">What Are You Passionate About?</h2>
-      <div class="flex w-full items-center space-x-2">
-        <Input 
-        id="job-graph-query"
-        bind:value={nlQuery}
-        placeholder="I like to paint and I know how to code"
-        class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
-        />
-        <Button
-          onclick={generateJobGraph}
-          disabled={isLoading}
-          class="bg-lime-600 text-stone-50 px-4 py-2 rounded-md hover:bg-lime-700 disabled:bg-stone-400"
-        >
-          {isLoading ? 'Loading...' : 'Explore'}
-        </Button>
-      </div>
-    </form>
+  <Card.Root class="h-[90vh]">
+    <Card.Content>
+      <section class="min-h-full rounded-md mb-8">
+        <form on:submit={generateJobGraph}>
+          <!-- <Label for="job-graph-query">What Are You Passionate About?</Label> -->
+          <h2 class="text-center font-medium text-stone-700 mb-2">What Are You Passionate About?</h2>
+          <div class="flex w-full items-center space-x-2">
+            <Input
+            id="job-graph-query"
+            bind:value={nlQuery}
+            placeholder="I like to paint and I know how to code"
+            class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
+            />
+            <Button
+              onclick={generateJobGraph}
+              disabled={isLoading}
+              class="bg-lime-600 text-stone-50 px-4 py-2 rounded-md hover:bg-lime-700 disabled:bg-stone-400"
+            >
+              {isLoading ? 'Loading...' : 'Explore'}
+            </Button>
+          </div>
+        </form>
 
 
-    <!-- <form action="" method="POST" use:enhance> -->
-      <!-- <Form.Control let:attrs>
-        <Form.Label for="job-graph-query">What Are You Passionate About?</Form.Label>
-        <Input 
-          {...attrs}
-          bind:value={$formData.nlq}
-        />
-        <Form.FieldErrors /> -->
-        <!-- <Label for="job-graph-query">What Are You Passionate About?</Label>
-        <Input 
-          id="job-graph-query"
-          bind:value={nlQuery}
-          placeholder="I like to paint and I know how to code"
-          class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
-        /> -->
-      <!-- </Form.Control>
-      <Form.Button
-        onclick={generateJobGraph}
-        disabled={isLoading}
-      >
-        Explore
-      </Form.Button> -->
+        <!-- <form action="" method="POST" use:enhance> -->
+          <!-- <Form.Control let:attrs>
+            <Form.Label for="job-graph-query">What Are You Passionate About?</Form.Label>
+            <Input 
+              {...attrs}
+              bind:value={$formData.nlq}
+            />
+            <Form.FieldErrors /> -->
+            <!-- <Label for="job-graph-query">What Are You Passionate About?</Label>
+            <Input 
+              id="job-graph-query"
+              bind:value={nlQuery}
+              placeholder="I like to paint and I know how to code"
+              class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
+            /> -->
+          <!-- </Form.Control>
+          <Form.Button
+            onclick={generateJobGraph}
+            disabled={isLoading}
+          >
+            Explore
+          </Form.Button> -->
 
-      <!-- <Textarea
-        id="job-graph-textarea"
-        bind:value={nlQuery}
-        placeholder="I like to paint and I know how to code"
-        class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
-      /> -->
-      <!-- <Button         
-        onclick={generateJobGraph}
-        disabled={isLoading}
-      >
-        Explore
-      </Button>
-      {#if error}
-        <p class="text-muted-foreground text-sm">
-          {error}
-        </p>
-      {/if} -->
-    <!-- </form> -->
+          <!-- <Textarea
+            id="job-graph-textarea"
+            bind:value={nlQuery}
+            placeholder="I like to paint and I know how to code"
+            class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
+          /> -->
+          <!-- <Button         
+            onclick={generateJobGraph}
+            disabled={isLoading}
+          >
+            Explore
+          </Button>
+          {#if error}
+            <p class="text-muted-foreground text-sm">
+              {error}
+            </p>
+          {/if} -->
+        <!-- </form> -->
 
 
-    <!-- <h2 class="text-center font-medium text-stone-700 mb-2">What Are You Passionate About?</h2> -->
-    <!-- <div class="flex gap-2"> -->
+        <!-- <h2 class="text-center font-medium text-stone-700 mb-2">What Are You Passionate About?</h2> -->
+        <!-- <div class="flex gap-2"> -->
 
-      <!-- <Label>What Are You Passionate About?</Label> -->
-      <!-- <Textarea
-        id="job-graph-textarea"
-        bind:value={nlQuery}
-        placeholder="I like to paint and I know how to code"
-        class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
-      /> -->
-      <!-- <textarea
-        bind:value={nlQuery}
-        placeholder="I like to paint and I know how to code"
-        class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
-      ></textarea> -->
-      <!-- <input
-        type="text"
-        bind:value={nlQuery}
-        placeholder="I like to paint and I know how to code"
-        class="flex-grow p-2 border rounded-md text-stone-800 placeholder-stone-300"
-      /> -->
-      <!-- <button 
-        onclick={generateJobGraph}
-        disabled={isLoading}
-        class="bg-lime-600 text-stone-50 px-4 py-2 rounded-md hover:bg-lime-700 disabled:bg-stone-400"
-      >
-        {isLoading ? 'Loading...' : 'Explore'}
-      </button> -->
-    <!-- </div> -->
-    {#if error}
-      <p class="text-red-500 text-sm mt-2">{error}</p>
-    {/if}
-  </section>
-  
-  <section class="h-[70vh] rounded-md">
+          <!-- <Label>What Are You Passionate About?</Label> -->
+          <!-- <Textarea
+            id="job-graph-textarea"
+            bind:value={nlQuery}
+            placeholder="I like to paint and I know how to code"
+            class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
+          /> -->
+          <!-- <textarea
+            bind:value={nlQuery}
+            placeholder="I like to paint and I know how to code"
+            class="flex-grow p-2 border min-h-fit rounded-md text-stone-800 placeholder-stone-300"
+          ></textarea> -->
+          <!-- <input
+            type="text"
+            bind:value={nlQuery}
+            placeholder="I like to paint and I know how to code"
+            class="flex-grow p-2 border rounded-md text-stone-800 placeholder-stone-300"
+          /> -->
+          <!-- <button 
+            onclick={generateJobGraph}
+            disabled={isLoading}
+            class="bg-lime-600 text-stone-50 px-4 py-2 rounded-md hover:bg-lime-700 disabled:bg-stone-400"
+          >
+            {isLoading ? 'Loading...' : 'Explore'}
+          </button> -->
+        <!-- </div> -->
+        {#if error}
+          <p class="text-destructive text-sm mt-2">{error}</p>
+        {/if}
+      </section>
+    <!-- </Card.Content>
+  </Card.Root>
+
+  <Card.Root>
+    <Card.Content> -->
+  <section class="h-[65vh] rounded-md">
+  <!-- <section class="h-full rounded-md"> -->
     <!-- <h3 class="text-center text-gray-700">JOBS GRAPH &lt;output&gt;</h3> -->
     <h3 class="text-center font-medium text-stone-700 mb-2">Job Trends Tailored for You</h3>
     <!-- <div class="graph-container min-h-[75vh] outline-2 outline-red-600 bg-stone-100 rounded-md border"> -->
     <BaseGraph {nodes} {edges} {jobDetails} />
 
-
-      <!-- {#if graphData.nodes.length > 0}
-        <ForceGraph {graphData} />
-      {:else}
-        <div class="flex items-center justify-center h-full text-gray-400">
-          Enter a query and click Generate to see the job graph
-        </div>
-      {/if} -->
-    <!-- </div> -->
   </section>
+  </Card.Content>
+  </Card.Root>
 </main>

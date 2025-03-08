@@ -66,28 +66,28 @@ This means that the parent container needs a height to render the flow.
         <!-- <div class="max-h-[60vh] overflow-y-auto"> -->
           <div class="grid grid-cols-2 gap-4 py-4">
               <Label class="font-bold text-left">Salary:</Label>
-              <p>{modalData?.min_salary ?? "Unknown"} - {modalData?.max_salary ?? "Unknown"} Baht</p>
+              <p class="text-sm">{modalData?.min_salary ?? "Unknown"} - {modalData?.max_salary ?? "Unknown"} Baht</p>
               
               <Label class="font-bold text-left">Experience:</Label>
-              <p>{modalData?.min_exp ?? "Unknown"} - {modalData?.max_exp ?? "Unknown"} year(s)</p>
+              <p class="text-sm">{modalData?.min_exp ?? "Unknown"} - {modalData?.max_exp ?? "Unknown"} year(s)</p>
         
               <Label class="font-bold text-left">Level:</Label>
-              <p>{modalData?.level ?? "Unknown"}</p>
+              <p class="text-sm">{modalData?.level ?? "Unknown"}</p>
         
               <Label class="font-bold text-left">Category:</Label>
-              <p>{modalData?.category ?? "Unknown"}</p>
+              <p class="text-sm">{modalData?.category ?? "Unknown"}</p>
         
               <Label class="font-bold text-left">Specialized Knowledge:</Label>
-              <p class="break-words overflow-wrap-anywhere">{modalData?.hard_skill?.join(', ') ?? "Unknown"}</p>
+              <p class="text-sm break-words overflow-wrap-anywhere">{modalData?.hard_skill?.join(', ') ?? "Unknown"}</p>
         
               <Label class="font-bold text-left">Soft Skills:</Label>
-              <p class="break-words overflow-wrap-anywhere">{modalData?.soft_skill?.join(', ') ?? "Unknown"}</p>
+              <p class="text-sm break-words overflow-wrap-anywhere">{modalData?.soft_skill?.join(', ') ?? "Unknown"}</p>
         
               <Label class="font-bold text-left">Matching Interests:</Label>
-              <p class="break-words overflow-wrap-anywhere">{modalData?.interest?.join(', ') ?? "Unknown"}</p>
+              <p class="text-sm break-words overflow-wrap-anywhere">{modalData?.interest?.join(', ') ?? "Unknown"}</p>
         
               <Label class="font-bold text-left">Education:</Label>
-              <p class="break-words overflow-wrap-anywhere">{modalData?.education?.join(', ') ?? "Unknown"}</p>
+              <p class="text-sm break-words overflow-wrap-anywhere">{modalData?.education?.join(', ') ?? "Unknown"}</p>
           </div>
         <!-- </div> -->
         <!-- <Sheet.Footer>
