@@ -194,7 +194,7 @@
 </script>
 
 <!-- <main class="min-h-full bg-stone-100 p-8"> -->
-<main class="min-h-full bg-background p-8">
+<main class="min-h-full max-w-5xl bg-background p-8 mx-auto">
   <!-- <h2 class="text-xl font-bold text-blue-500 mb-4">Jobs Graph</h2> -->
   
   <section class="min-h-full rounded-md mb-8">
@@ -311,7 +311,7 @@
       </button> -->
     <!-- </div> -->
     {#if error}
-      <p class="text-red-500 mt-2">{error}</p>
+      <p class="text-red-500 text-sm mt-2">{error}</p>
     {/if}
   </section>
   
