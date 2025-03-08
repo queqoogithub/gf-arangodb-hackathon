@@ -22,13 +22,13 @@
       class="tab-button {activeTab === 'jobs' ? 'active' : ''}" 
       on:click={() => setActiveTab('jobs')}
     >
-      Jobs Graph
+      Visualize Careers
     </button>
     <button 
       class="tab-button {activeTab === 'skills' ? 'active' : ''}" 
       on:click={() => setActiveTab('skills')}
     >
-      Jobs Chat
+      Career Chat
     </button>
   </nav>
 
