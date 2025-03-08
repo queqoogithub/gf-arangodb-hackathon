@@ -45,12 +45,12 @@
   <h2 class="text-xl font-bold text-orange-500 mb-4">🔮 Tell us more to foresee your inner talent</h2>
   
   <div class="input-section bg-gray-100 p-4 rounded-md mb-4">
-    <h3 class="text-center text-gray-700 mb-2">JOB &lt;input&gt;</h3>
+    <h3 class="text-center text-gray-700 mb-2">Share your skills, job experience, and passions</h3>
     <div class="flex gap-2">
       <input
         type="text"
         bind:value={jobName}
-        placeholder="Describe your job interests and skills (e.g., 'I'm interested in data science and know Python')"
+        placeholder="Describe your job interests and skills (e.g., I'm interested in data science and know Python)"
         class="flex-grow p-2 border rounded-md"
       />
       <button 
@@ -67,7 +67,7 @@
   </div>
   
   <div class="response-section bg-gray-100 p-4 rounded-md">
-    <h3 class="text-center text-gray-700 mb-2">ANALYSIS &lt;output&gt;</h3>
+    <h3 class="text-center text-gray-700 mb-2">Career Opportunity Insights</h3>
     <div class="response-container min-h-[8rem] p-4 bg-white rounded-md border border-gray-200">
       {#if formattedResponse}
         <div class="text-gray-700 prose prose-orange prose-sm max-w-none">{@html formattedResponse}</div>
