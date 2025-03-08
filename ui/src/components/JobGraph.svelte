@@ -2,7 +2,6 @@
   import { onMount } from 'svelte';
   import ForceGraph from '../lib/ForceGraph.svelte';
   import BaseGraph from '../lib/BaseGraph.svelte';
-  import Modal from '../lib/Modal.svelte';
   import { type Node, type Edge } from '@xyflow/svelte';
   import { writable } from 'svelte/store';
   import type { JobGraphResponse, APINode } from '../types';

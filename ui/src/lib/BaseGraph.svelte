@@ -8,7 +8,6 @@
     BackgroundVariant,
     ConnectionLineType,
   } from '@xyflow/svelte';
-  import Modal from '../lib/Modal.svelte';
   import * as Dialog from "$lib/components/ui/dialog";
   import * as Resizable from "$lib/components/ui/resizable";
   import { Button } from "$lib/components/ui/button";
