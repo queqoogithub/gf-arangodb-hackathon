@@ -168,7 +168,7 @@
   
   <section class="min-h-full rounded-md mb-8">
     <!-- <h3 class="text-center text-gray-700 mb-2">NLQ &lt;input&gt;</h3> -->
-    <h2 class="text-center font-medium text-stone-700 mb-2">Tell us what you're interested in</h2>
+    <h2 class="text-center font-medium text-stone-700 mb-2">What Are You Passionate About?</h2>
     <div class="flex gap-2">
       <textarea 
         bind:value={nlQuery}
@@ -186,7 +186,7 @@
         disabled={isLoading}
         class="bg-lime-600 text-stone-50 px-4 py-2 rounded-md hover:bg-lime-700 disabled:bg-stone-400"
       >
-        {isLoading ? 'Loading...' : 'Generate'}
+        {isLoading ? 'Loading...' : 'Explore'}
       </button>
     </div>
     {#if error}
@@ -196,7 +196,7 @@
   
   <section class="h-[70vh] rounded-md">
     <!-- <h3 class="text-center text-gray-700">JOBS GRAPH &lt;output&gt;</h3> -->
-    <h3 class="text-center font-medium text-stone-700 mb-2">Job Matches Based on Your Interests & Skills</h3>
+    <h3 class="text-center font-medium text-stone-700 mb-2">Job Trends Tailored for You</h3>
     <!-- <div class="graph-container min-h-[75vh] outline-2 outline-red-600 bg-stone-100 rounded-md border"> -->
     <BaseGraph {nodes} {edges} {jobDetails} />
 
