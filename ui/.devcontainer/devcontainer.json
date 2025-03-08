@@ -1,0 +1,27 @@
+{
+  "name": "SvelteKit Development",
+  "dockerFile": "../Dockerfile",
+  "forwardPorts": [5173],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "svelte.svelte-vscode",
+        "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "svelte.svelte-vscode",
+        "[svelte]": {
+          "editor.defaultFormatter": "svelte.svelte-vscode"
+        }
+      }
+    }
+  },
+  "postCreateCommand": "npm install",
+  "mounts": [
+    "source=node_modules,target=/app/node_modules,type=volume"
+  ],
+  "remoteUser": "node"
+}
