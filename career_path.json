@@ -1,0 +1,351 @@
+{
+    "nlq": "I have experience in sustainability plan, environmental management, and also have creativity. I am interested in gardening and sustainability. I have a degree in Agriculture.",
+    "user_input": {
+        "job": [],
+        "hard_skill": [
+            "Sustainability Planning",
+            "Environmental Management"
+        ],
+        "soft_skill": [
+            "Creativity"
+        ],
+        "interest": [
+            "Gardening",
+            "Sustainability"
+        ],
+        "education": [
+            "Bachelor's in Agriculture"
+        ]
+    },
+    "nodes": [
+        {
+            "job": "Organic Farmer",
+            "min_salary": 40000,
+            "max_salary": 65000,
+            "min_exp": 2,
+            "max_exp": 10,
+            "level": "Journey",
+            "category": "Agriculture",
+            "job_description": "Grows crops and raises livestock using organic methods.",
+            "hard_skill": [
+                "Quality Control",
+                "Environmental Management",
+                "Process Improvement",
+                "Sustainability Planning",
+                "Operations Management"
+            ],
+            "soft_skill": [
+                "Persistence",
+                "Creativity",
+                "Sustainability Awareness",
+                "Communication",
+                "Problem Solving"
+            ],
+            "interest": [
+                "Healthy Living",
+                "Composting",
+                "Gardening",
+                "Sustainability"
+            ],
+            "education": [
+                "Bachelor's in Sustainability",
+                "Bachelor's in Agriculture"
+            ],
+            "children": [
+                {
+                    "job": "Soil Conservationist",
+                    "min_salary": 50000,
+                    "max_salary": 75000,
+                    "min_exp": 2,
+                    "max_exp": 8,
+                    "level": "Journey",
+                    "category": "Environment",
+                    "job_description": "Implements strategies to prevent soil erosion and degradation.",
+                    "hard_skill": [
+                        "Data Analysis",
+                        "Environmental Management",
+                        "Research",
+                        "GIS",
+                        "Sustainability Planning"
+                    ],
+                    "soft_skill": [
+                        "Sustainability Awareness",
+                        "Analytical Thinking",
+                        "Communication",
+                        "Problem Solving",
+                        "Research"
+                    ],
+                    "interest": [
+                        "Outdoor Activities",
+                        "Soil Science",
+                        "Land Restoration",
+                        "Environmental Management"
+                    ],
+                    "education": [
+                        "Master's in Environmental Science",
+                        "Bachelor's in Environmental Science"
+                    ]
+                },
+                {
+                    "job": "Sustainability Manager",
+                    "min_salary": 65000,
+                    "max_salary": 95000,
+                    "min_exp": 4,
+                    "max_exp": 8,
+                    "level": "Senior",
+                    "category": "Business",
+                    "job_description": "Transportation",
+                    "hard_skill": [
+                        "Environmental Management",
+                        "Stakeholder Management",
+                        "Sustainability Planning",
+                        "SEM",
+                        "Regulatory Compliance"
+                    ],
+                    "soft_skill": [
+                        "Organization",
+                        "Problem Solving",
+                        "Communication",
+                        "Strategic Thinking",
+                        "Leadership",
+                        "Decision Making",
+                        "Research"
+                    ],
+                    "interest": [
+                        "Business Strategy",
+                        "Green Initiatives",
+                        "Sustainability",
+                        "Environmental Science",
+                        "Corporate Social Responsibility"
+                    ],
+                    "education": [
+                        "Bachelor's in Business Administration",
+                        "Master's in Sustainability",
+                        "Bachelor's in Environmental Science"
+                    ]
+                }
+            ]
+        },
+        {
+            "job": "Sustainability Coordinator",
+            "min_salary": 50000,
+            "max_salary": 80000,
+            "min_exp": 2,
+            "max_exp": 8,
+            "level": "Journey",
+            "category": "Environment",
+            "job_description": "Develops programs to promote sustainable agricultural practices.",
+            "hard_skill": [
+                "Data Analysis",
+                "Environmental Management",
+                "Sustainability Planning",
+                "Project Management",
+                "Strategic Planning"
+            ],
+            "soft_skill": [
+                "Creativity",
+                "Sustainability Awareness",
+                "Stakeholder Management",
+                "Communication",
+                "Problem Solving"
+            ],
+            "interest": [
+                "Sustainability",
+                "Environmental Management",
+                "Green Initiatives",
+                "Research"
+            ],
+            "education": [
+                "Master's in Sustainability",
+                "Bachelor's in Sustainability"
+            ],
+            "children": [
+                {
+                    "job": "Sustainability Consultant",
+                    "min_salary": 55000,
+                    "max_salary": 85000,
+                    "min_exp": 3,
+                    "max_exp": 7,
+                    "level": "Mid",
+                    "category": "Business",
+                    "job_description": "Transportation",
+                    "hard_skill": [
+                        "Environmental Management",
+                        "Stakeholder Management",
+                        "Construction Management",
+                        "Sustainability Planning",
+                        "SEM"
+                    ],
+                    "soft_skill": [
+                        "Ethics",
+                        "Analytical Thinking",
+                        "Problem Solving",
+                        "Communication",
+                        "Technical Understanding",
+                        "Strategic Thinking",
+                        "Research"
+                    ],
+                    "interest": [
+                        "Climate Action",
+                        "Environmental Management",
+                        "Green Business",
+                        "Sustainability",
+                        "Corporate Social Responsibility"
+                    ],
+                    "education": [
+                        "Bachelor's in Engineering",
+                        "Master's in Sustainability",
+                        "Bachelor's in Environmental Science"
+                    ]
+                },
+                {
+                    "job": "Chief Sustainability Officer",
+                    "min_salary": 80000,
+                    "max_salary": 130000,
+                    "min_exp": 5,
+                    "max_exp": 10,
+                    "level": "Senior",
+                    "category": "Business",
+                    "job_description": "Transportation",
+                    "hard_skill": [
+                        "SEM",
+                        "Environmental Management",
+                        "Stakeholder Management",
+                        "Sustainability Planning",
+                        "Regulatory Compliance",
+                        "Change Management"
+                    ],
+                    "soft_skill": [
+                        "Ethics",
+                        "Problem Solving",
+                        "Communication",
+                        "Vision",
+                        "Strategic Thinking",
+                        "Leadership",
+                        "Decision Making"
+                    ],
+                    "interest": [
+                        "Business Strategy",
+                        "Environmental Management",
+                        "Sustainability",
+                        "Corporate Social Responsibility",
+                        "Social Impact"
+                    ],
+                    "education": [
+                        "Master's in Sustainability",
+                        "Bachelor's in Sustainability",
+                        "Bachelor's in Environmental Science"
+                    ]
+                }
+            ]
+        },
+        {
+            "job": "Environmental Designer",
+            "min_salary": 50000,
+            "max_salary": 80000,
+            "min_exp": 3,
+            "max_exp": 7,
+            "level": "Mid",
+            "category": "Creative",
+            "job_description": "Transportation",
+            "hard_skill": [
+                "Resource Allocation",
+                "Environmental Management",
+                "Construction Management",
+                "Architecture",
+                "Sustainability Planning",
+                "Solidity"
+            ],
+            "soft_skill": [
+                "Spatial Thinking",
+                "Creativity",
+                "Sustainability Awareness",
+                "Communication",
+                "Problem Solving",
+                "Technical Understanding",
+                "Research"
+            ],
+            "interest": [
+                "Business Planning",
+                "Sustainable Design",
+                "Ecology",
+                "Green Business"
+            ],
+            "education": [
+                "Bachelor's in Architecture",
+                "Master's in Environmental Science",
+                "Master's in Sustainability"
+            ],
+            "children": [
+                {
+                    "job": "Environmental Engineer",
+                    "min_salary": 65000,
+                    "max_salary": 105000,
+                    "min_exp": 3,
+                    "max_exp": 10,
+                    "level": "Journey",
+                    "category": "Environment",
+                    "job_description": "Designs systems to mitigate environmental damage and pollution.",
+                    "hard_skill": [
+                        "Risk Assessment",
+                        "Data Analysis",
+                        "Environmental Management",
+                        "Engineering Design",
+                        "Project Management"
+                    ],
+                    "soft_skill": [
+                        "Creativity",
+                        "Sustainability Awareness",
+                        "Analytical Thinking",
+                        "Problem Solving",
+                        "Technical Understanding"
+                    ],
+                    "interest": [
+                        "Sustainability",
+                        "Engineering Design",
+                        "Green Technology",
+                        "Research"
+                    ],
+                    "education": [
+                        "Master's in Civil Engineering",
+                        "Bachelor's in Environmental Engineering"
+                    ]
+                },
+                {
+                    "job": "Environmental Scientist",
+                    "min_salary": 60000,
+                    "max_salary": 90000,
+                    "min_exp": 2,
+                    "max_exp": 8,
+                    "level": "Journey",
+                    "category": "Environment",
+                    "job_description": "Studies environmental impacts and develops solutions for pollution control.",
+                    "hard_skill": [
+                        "Data Visualization",
+                        "Statistical Analysis",
+                        "Data Analysis",
+                        "Environmental Management",
+                        "Research"
+                    ],
+                    "soft_skill": [
+                        "Sustainability Awareness",
+                        "Analytical Thinking",
+                        "Communication",
+                        "Problem Solving",
+                        "Research"
+                    ],
+                    "interest": [
+                        "Sustainability",
+                        "Climate Science",
+                        "Research",
+                        "Recycling"
+                    ],
+                    "education": [
+                        "Master's in Environmental Science",
+                        "Bachelor's in Environmental Science"
+                    ]
+                }
+            ]
+        }
+    ]
+}

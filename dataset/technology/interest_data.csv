@@ -1,0 +1,247 @@
+interest_id,interest,category
+1,AI,Technology & Computing
+2,Algorithm Design,Technology & Computing
+3,Algorithms,Technology & Computing
+4,Automation,Technology & Computing
+5,Big Data,Technology & Computing
+6,Blockchain Technology,Technology & Computing
+7,Cloud Computing,Technology & Computing
+8,Cloud Databases,Technology & Computing
+9,Cloud Networking,Technology & Computing
+10,Computer Architecture,Technology & Computing
+11,Computer Graphics,Technology & Computing
+12,Computer Vision,Technology & Computing
+13,Computational Biology,Technology & Computing
+14,Computational Intelligence,Technology & Computing
+15,Computational Linguistics,Technology & Computing
+16,Computational Neuroscience,Technology & Computing
+17,Computational Physics,Technology & Computing
+18,Computational Science,Technology & Computing
+19,Computer Hardware,Technology & Computing
+20,Cryptocurrency,Technology & Computing
+21,Cybersecurity,Technology & Computing
+22,Data Analysis,Technology & Computing
+23,Data Architecture,Technology & Computing
+24,Data Protection,Technology & Computing
+25,Data Science,Technology & Computing
+26,Data Visualization,Technology & Computing
+27,Database Design,Technology & Computing
+28,Database Management,Technology & Computing
+29,Database Systems,Technology & Computing
+30,Deep Learning,Technology & Computing
+31,DevOps,Technology & Computing
+32,Digital Forensics,Technology & Computing
+33,Digital Transformation,Technology & Computing
+34,Distributed Systems,Technology & Computing
+35,Edge Computing,Technology & Computing
+36,Enterprise Analytics,Technology & Computing
+37,Game Development,Technology & Computing
+38,Hardware Design,Technology & Computing
+39,Information Architecture,Technology & Computing
+40,Information Security,Technology & Computing
+41,Infrastructure,Technology & Computing
+42,IoT,Technology & Computing
+43,IT Infrastructure,Technology & Computing
+44,IT Support,Technology & Computing
+45,Machine Learning,Technology & Computing
+46,Mobile Apps,Technology & Computing
+47,Mobile Computing,Technology & Computing
+48,Mobile Gaming,Technology & Computing
+49,Mobile Technology,Technology & Computing
+50,Network Architecture,Technology & Computing
+51,Network Engineering,Technology & Computing
+52,Network Security,Technology & Computing
+53,Neural Networks,Technology & Computing
+54,Programming,Technology & Computing
+55,Quantum Computing,Technology & Computing
+56,Robotics,Technology & Computing
+57,Security,Technology & Computing
+58,Server Architecture,Technology & Computing
+59,Software Development,Technology & Computing
+60,Software Documentation,Technology & Computing
+61,Software Quality,Technology & Computing
+62,Software Systems,Technology & Computing
+63,System Architecture,Technology & Computing
+64,System Optimization,Technology & Computing
+65,Technology,Technology & Computing
+66,Web Development,Technology & Computing
+67,Accounting,Business & Management
+68,Banking,Business & Management
+69,Business Analysis,Business & Management
+70,Business Development,Business & Management
+71,Business Operations,Business & Management
+72,Business Planning,Business & Management
+73,Business Relationships,Business & Management
+74,Business Strategy,Business & Management
+75,Capital Markets,Business & Management
+76,Client Advisory,Business & Management
+77,Client Relations,Business & Management
+78,Client Relationship Management,Business & Management
+79,Corporate Finance,Business & Management
+80,Corporate Governance,Business & Management
+81,Customer Experience,Business & Management
+82,Customer Relations,Business & Management
+83,Customer Service,Business & Management
+84,Decision Support,Business & Management
+85,Economics,Business & Management
+86,Enterprise Reporting,Business & Management
+87,Enterprise Solutions,Business & Management
+88,Entrepreneurship,Business & Management
+89,Finance,Business & Management
+90,Financial Analysis,Business & Management
+91,Financial Markets,Business & Management
+92,Financial Planning,Business & Management
+93,Global Business,Business & Management
+94,Human Resources,Business & Management
+95,Investment,Business & Management
+96,Investment Analysis,Business & Management
+97,Investment Banking,Business & Management
+98,Investment Management,Business & Management
+99,Leadership Development,Business & Management
+100,Management Consulting,Business & Management
+101,Market Analysis,Business & Management
+102,Market Expansion,Business & Management
+103,Market Research,Business & Management
+104,Market Trends,Business & Management
+105,Marketing,Business & Management
+106,Marketing Analytics,Business & Management
+107,Marketing Strategy,Business & Management
+108,Mergers & Acquisitions,Business & Management
+109,Negotiation,Business & Management
+110,Operations Management,Business & Management
+111,Organizational Development,Business & Management
+112,Organizational Psychology,Business & Management
+113,Process Improvement,Business & Management
+114,Process Optimization,Business & Management
+115,Product Development,Business & Management
+116,Product Management,Business & Management
+117,Project Management,Business & Management
+118,Risk Management,Business & Management
+119,Sales,Business & Management
+120,Sales Strategy,Business & Management
+121,Strategic Partnerships,Business & Management
+122,Strategic Planning,Business & Management
+123,Supply Chain,Business & Management
+124,Team Leadership,Business & Management
+125,Team Management,Business & Management
+126,Workforce Planning,Business & Management
+127,3D Design,Creative & Design
+128,3D Graphics,Creative & Design
+129,Advertising,Creative & Design
+130,Animation,Creative & Design
+131,Art,Creative & Design
+132,Art Direction,Creative & Design
+133,Brand Design,Creative & Design
+134,Brand Identity,Creative & Design
+135,Brand Management,Creative & Design
+136,Brand Storytelling,Creative & Design
+137,Branding,Creative & Design
+138,Character Design,Creative & Design
+139,Cinema,Creative & Design
+140,Comic Art,Creative & Design
+141,Content Creation,Creative & Design
+142,Content Marketing,Creative & Design
+143,Content Strategy,Creative & Design
+144,Creative Direction,Creative & Design
+145,Creative Leadership,Creative & Design
+146,Creative Writing,Creative & Design
+147,Creativity,Creative & Design
+148,Design,Creative & Design
+149,Design Systems,Creative & Design
+150,Digital Content,Creative & Design
+151,Digital Media,Creative & Design
+152,Editorial Design,Creative & Design
+153,Fashion,Creative & Design
+154,Film,Creative & Design
+155,Game Art,Creative & Design
+156,Game Design,Creative & Design
+157,Graphic Design,Creative & Design
+158,Illustration,Creative & Design
+159,Information Design,Creative & Design
+160,Interactive Design,Creative & Design
+161,Motion Graphics,Creative & Design
+162,Photography,Creative & Design
+163,Publishing,Creative & Design
+164,Storytelling,Creative & Design
+165,Theater,Creative & Design
+166,Typography,Creative & Design
+167,User Experience,Creative & Design
+168,User Interface,Creative & Design
+169,Visual Art,Creative & Design
+170,Visual Communication,Creative & Design
+171,Visual Effects,Creative & Design
+172,Visual Storytelling,Creative & Design
+173,Web Animation,Creative & Design
+174,Web Design,Creative & Design
+175,Bioinformatics,Science & Research
+176,Biotechnology,Science & Research
+177,Chemistry,Science & Research
+178,Climate Science,Science & Research
+179,Computational Chemistry,Science & Research
+180,Conservation,Science & Research
+181,Ecology,Science & Research
+182,Environmental Science,Science & Research
+183,Genomics,Science & Research
+184,Material Science,Science & Research
+185,Mathematics,Science & Research
+186,Medical Research,Science & Research
+187,Nanotechnology,Science & Research
+188,Neuroscience,Science & Research
+189,Pattern Recognition,Science & Research
+190,Physics,Science & Research
+191,Quantum Materials,Science & Research
+192,Quantum Physics,Science & Research
+193,Research,Science & Research
+194,Research Computing,Science & Research
+195,Research Methodology,Science & Research
+196,Scientific Computing,Science & Research
+197,Scientific Research,Science & Research
+198,Social Science,Science & Research
+199,Statistics,Science & Research
+200,Theoretical Physics,Science & Research
+201,Adult Education,Education & Learning
+202,Cognitive Psychology,Education & Learning
+203,E-Learning,Education & Learning
+204,Education,Education & Learning
+205,Educational Technology,Education & Learning
+206,Instructional Design,Education & Learning
+207,Knowledge Management,Education & Learning
+208,Learning & Development,Education & Learning
+209,Learning Design,Education & Learning
+210,Learning Experience,Education & Learning
+211,Learning Psychology,Education & Learning
+212,Online Education,Education & Learning
+213,Teaching Methodology,Education & Learning
+214,Technical Communication,Education & Learning
+215,Training & Development,Education & Learning
+216,User Education,Education & Learning
+217,Workplace Training,Education & Learning
+218,Healthcare,Health & Wellness
+219,Healthcare Innovation,Health & Wellness
+220,Healthcare Management,Health & Wellness
+221,Health Policy,Health & Wellness
+222,Medical Administration,Health & Wellness
+223,Medical Devices,Health & Wellness
+224,Medical Science,Health & Wellness
+225,Mental Health,Health & Wellness
+226,Patient Care,Health & Wellness
+227,Pharmaceuticals,Health & Wellness
+228,Psychology,Health & Wellness
+229,Public Health,Health & Wellness
+230,Wellness,Health & Wellness
+231,Climate Action,Social Impact & Environment
+232,Community Development,Social Impact & Environment
+233,Corporate Citizenship,Social Impact & Environment
+234,Corporate Social Responsibility,Social Impact & Environment
+235,Environmental Management,Social Impact & Environment
+236,Green Business,Social Impact & Environment
+237,Green Initiatives,Social Impact & Environment
+238,Nonprofit Management,Social Impact & Environment
+239,Philanthropy,Social Impact & Environment
+240,Social Impact,Social Impact & Environment
+241,Sustainability,Social Impact & Environment
+242,Sustainable Design,Social Impact & Environment
+243,Sustainable Development,Social Impact & Environment
+244,Sustainable Fashion,Social Impact & Environment
+245,Sustainable Landscaping,Social Impact & Environment
+246,Sustainable Mobility,Social Impact & Environment

@@ -1,0 +1,51 @@
+job_title,hard_skill
+General Practitioner,Medical Diagnosis|Patient Care|Clinical Research|Electronic Health Records|Data Analysis
+Registered Nurse,Patient Care|Electronic Health Records|Medical Billing|Clinical Procedures|Data Preprocessing
+Pharmacist,Pharmaceutical Research|Data Analysis|Medical Billing|Inventory Management|Regulatory Compliance
+Surgeon,Surgery|Patient Care|Medical Diagnosis|Electronic Health Records|Clinical Research
+Medical Laboratory Technician,Data Analysis|Laboratory Techniques|Quality Control|Medical Equipment Maintenance|Statistical Analysis
+Physical Therapist,Physical Therapy Techniques|Patient Care|Clinical Procedures|Electronic Health Records|Data Preprocessing
+Dentist,Dental Procedures|Patient Care|Medical Billing|Electronic Health Records|Clinical Research
+Paramedic,Emergency Medical Procedures|Patient Care|Medical Equipment Maintenance|Data Preprocessing
+Anesthesiologist,Anesthesia Administration|Surgery|Patient Care|Electronic Health Records|Clinical Research
+Clinical Psychologist,Psychological Assessment|Data Analysis|Clinical Research|Electronic Health Records|Statistical Analysis
+Optometrist,Optometric Procedures|Patient Care|Medical Billing|Electronic Health Records|Data Analysis
+Radiologist,Medical Imaging|Data Analysis|Clinical Research|Electronic Health Records|Statistical Analysis
+Medical Assistant,Patient Care|Electronic Health Records|Medical Billing|Clinical Procedures|Data Preprocessing
+Nurse Practitioner,Patient Care|Medical Diagnosis|Clinical Procedures|Electronic Health Records|Data Analysis|Clinical Research
+Cardiologist,Cardiology Procedures|Medical Diagnosis|Patient Care|Electronic Health Records|Clinical Research|Data Analysis
+Pharmacy Technician,Pharmaceutical Research|Inventory Management|Medical Billing|Data Preprocessing|Quality Control
+Occupational Therapist,Occupational Therapy Techniques|Patient Care|Clinical Procedures|Electronic Health Records|Data Analysis
+Pediatrician,Pediatric Care|Medical Diagnosis|Patient Care|Electronic Health Records|Clinical Research
+Speech Therapist,Speech Therapy Techniques|Patient Care|Clinical Research|Electronic Health Records|Data Analysis
+Chiropractor,Chiropractic Techniques|Patient Care|Medical Billing|Electronic Health Records|Data Preprocessing
+Medical Records Clerk,Electronic Health Records|Data Analysis|Medical Billing|Database Design|Data Preprocessing
+Oncologist,Oncology Procedures|Medical Diagnosis|Patient Care|Electronic Health Records|Clinical Research|Data Analysis
+Dental Hygienist,Dental Procedures|Patient Care|Medical Billing|Electronic Health Records|Quality Control
+Neurologist,Neurology Procedures|Medical Diagnosis|Patient Care|Electronic Health Records|Clinical Research|Data Analysis
+Respiratory Therapist,Respiratory Therapy Techniques|Patient Care|Medical Equipment Maintenance|Electronic Health Records|Data Analysis
+Emergency Medical Technician (EMT),Emergency Medical Procedures|Patient Care|Medical Equipment Maintenance|Data Preprocessing
+Orthopedic Surgeon,Orthopedic Surgery|Surgery|Patient Care|Electronic Health Records|Clinical Research
+Health Information Manager,Electronic Health Records|Database Design|Data Analysis|Medical Billing|HIPAA Compliance
+Veterinarian,Veterinary Procedures|Patient Care|Clinical Research|Electronic Health Records|Data Analysis
+Surgical Technician,Surgery Assistance|Patient Care|Medical Equipment Maintenance|Electronic Health Records|Quality Control
+Psychiatrist,Psychiatric Assessment|Medical Diagnosis|Patient Care|Electronic Health Records|Clinical Research
+Dietitian,Nutrition Planning|Patient Care|Data Analysis|Electronic Health Records|Clinical Research
+Obstetrician/Gynecologist,Obstetric Procedures|Gynecological Procedures|Patient Care|Electronic Health Records|Clinical Research
+Medical Billing Specialist,Medical Billing|Data Analysis|Electronic Health Records|Database Design|HIPAA Compliance
+Pathologist,Pathology Procedures|Medical Diagnosis|Clinical Research|Electronic Health Records|Data Analysis|Statistical Analysis
+Ultrasound Technician,Ultrasound Imaging|Patient Care|Medical Equipment Maintenance|Electronic Health Records|Data Preprocessing
+Home Health Aide,Patient Care|Basic Medical Procedures|Electronic Health Records|Data Preprocessing|Quality Control
+Biomedical Engineer,Medical Equipment Design|Data Analysis|Programming|Clinical Research|Quality Control
+Endocrinologist,Endocrinology Procedures|Medical Diagnosis|Patient Care|Electronic Health Records|Clinical Research
+Licensed Practical Nurse (LPN),Patient Care|Clinical Procedures|Electronic Health Records|Medical Billing|Data Preprocessing
+Medical Social Worker,Case Management|Patient Care|Electronic Health Records|Data Analysis|Clinical Research
+Gastroenterologist,Gastroenterology Procedures|Medical Diagnosis|Patient Care|Electronic Health Records|Clinical Research
+Phlebotomist,Phlebotomy Techniques|Patient Care|Medical Equipment Maintenance|Electronic Health Records|Quality Control
+Rehabilitation Counselor,Rehabilitation Techniques|Patient Care|Data Analysis|Electronic Health Records|Clinical Research
+Infectious Disease Specialist,Infectious Disease Management|Medical Diagnosis|Clinical Research|Electronic Health Records|Data Analysis|Statistical Analysis
+Medical Equipment Technician,Medical Equipment Maintenance|Data Analysis|Quality Control|Electronic Health Records|Programming
+Allergist,Allergy Testing|Medical Diagnosis|Patient Care|Electronic Health Records|Clinical Research
+Hospice Nurse,Patient Care|Palliative Care Techniques|Electronic Health Records|Clinical Procedures|Data Preprocessing
+Dermatologist,Dermatology Procedures|Medical Diagnosis|Patient Care|Electronic Health Records|Clinical Research
+Public Health Analyst,Data Analysis|Statistical Analysis|Public Health Research|Electronic Health Records|Forecasting

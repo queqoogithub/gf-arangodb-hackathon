@@ -1,0 +1,50 @@
+job_title,hard_skill
+Electrician,Electrical Wiring|Circuit Testing|Blueprint Reading|Safety Protocols|Power Tools
+Plumber,Pipe Installation|Plumbing Systems|Blueprint Reading|Welding|Leak Detection
+Carpenter,Woodworking|Blueprint Reading|Power Tools|Measurement|Finishing Techniques
+HVAC Technician,HVAC Systems|Refrigeration|Ductwork Installation|Diagnostic Tools|Maintenance Protocols
+Welder,Welding Techniques|Blueprint Reading|Metal Fabrication|Safety Protocols|Grinding
+Auto Mechanic,Engine Repair|Diagnostic Equipment|Brake Systems|Transmission Repair|Vehicle Electronics
+Mason,Masonry Techniques|Blueprint Reading|Concrete Mixing|Bricklaying|Power Tools
+Painter,Painting Techniques|Surface Preparation|Color Matching|Spray Painting|Safety Protocols
+Roofer,Roofing Installation|Material Handling|Blueprint Reading|Waterproofing|Safety Protocols
+Construction Laborer,Concrete Pouring|Power Tools|Site Preparation|Material Handling|Safety Protocols
+Heavy Equipment Operator,Equipment Operation|Maintenance Checks|Safety Protocols|Load Management|Site Navigation
+Pipefitter,Pipe Fabrication|Welding|Blueprint Reading|Pressure Testing|Safety Protocols
+Boilermaker,Boiler Assembly|Welding|Blueprint Reading|Metal Fabrication|Safety Protocols
+Sheet Metal Worker,Sheet Metal Fabrication|Duct Installation|Welding|Blueprint Reading|Power Tools
+Elevator Mechanic,Elevator Installation|Electrical Systems|Maintenance Protocols|Blueprint Reading|Safety Protocols
+Glazier,Glass Cutting|Window Installation|Sealant Application|Blueprint Reading|Safety Protocols
+Tile Setter,Tile Installation|Grouting|Surface Preparation|Measurement|Power Tools
+Drywall Installer,Drywall Installation|Taping|Sanding|Blueprint Reading|Power Tools
+Concrete Finisher,Concrete Finishing|Form Setting|Surface Leveling|Power Tools|Curing Techniques
+Landscaper,Landscape Design|Planting|Irrigation Systems|Lawn Maintenance|Power Tools
+Pest Control Technician,Pesticide Application|Inspection Tools|Safety Protocols|Pest Identification|Documentation
+Cleaner,Cleaning Equipment|Sanitation Protocols|Chemical Handling|Time Management Tools|Inventory Tracking
+Security Guard,Surveillance Systems|Access Control|Incident Reporting|Patrol Techniques|Safety Protocols
+Locksmith,Lock Installation|Key Cutting|Lock Picking|Security Systems|Tool Maintenance
+Appliance Repair Technician,Appliance Diagnostics|Electrical Repair|Part Replacement|Tool Usage|Safety Protocols
+Maintenance Worker,Facility Maintenance|Basic Plumbing|Electrical Repair|HVAC Basics|Tool Usage
+Janitor,Cleaning Equipment|Floor Care|Waste Management|Chemical Safety|Inventory Management
+Handyman,Basic Carpentry|Plumbing Repair|Electrical Repair|Painting|Tool Usage
+Delivery Driver,Route Navigation|GPS Systems|Vehicle Maintenance|Delivery Software|Safety Protocols
+Bus Driver,Bus Operation|Route Planning|Passenger Safety|Vehicle Maintenance|Ticketing Systems
+Taxi Driver,Navigation Systems|Vehicle Maintenance|Payment Processing|Customer Service Tools|Safety Protocols
+Warehouse Worker,Forklift Operation|Inventory Systems|Packing Techniques|Safety Protocols|Loading Equipment
+Forklift Operator,Forklift Operation|Load Balancing|Safety Protocols|Warehouse Navigation|Maintenance Checks
+Parking Attendant,Parking Systems|Payment Processing|Traffic Management|Customer Service Tools|Safety Protocols
+Barber,Hair Cutting Techniques|Styling Tools|Sanitation Protocols|Shaving|Product Knowledge
+Hairdresser,Hair Coloring|Styling Techniques|Chemical Treatments|Sanitation Protocols|Tool Maintenance
+Cook,Cooking Techniques|Food Preparation|Knife Skills|Kitchen Equipment|Safety Protocols
+Waiter/Waitress,POS Systems|Order Management|Food Safety|Table Setting|Customer Service Tools
+Bartender,Mixology|Bar Equipment|Inventory Management|POS Systems|Sanitation Protocols
+Tailor,Sewing Techniques|Pattern Making|Fabric Cutting|Measurement|Machine Operation
+Upholsterer,Upholstery Techniques|Fabric Selection|Sewing|Tool Usage|Furniture Repair
+Shoe Repairer,Shoe Repair Techniques|Leather Working|Stitching|Adhesive Application|Tool Maintenance
+Laundry Worker,Laundry Equipment|Stain Removal|Ironing Techniques|Chemical Handling|Inventory Tracking
+Gardener,Plant Care|Irrigation Systems|Pruning|Soil Management|Power Tools
+Housekeeper,Cleaning Techniques|Laundry Skills|Bed Making|Chemical Safety|Inventory Management
+Moving Specialist,Packing Techniques|Loading Equipment|Furniture Handling|Safety Protocols|Route Planning
+Waste Collector,Waste Sorting|Vehicle Operation|Safety Protocols|Recycling Processes|Equipment Maintenance
+Automotive Detailer,Detailing Techniques|Polishing|Waxing|Cleaning Equipment|Product Application
+Personal Care Aide,Personal Care Skills|Mobility Assistance|Hygiene Protocols|Safety Procedures|Basic First Aid"

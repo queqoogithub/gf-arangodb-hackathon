@@ -1,0 +1,187 @@
+education_id,degree,category
+1,Bachelor's in Computer Science,Computer Science & IT
+2,Master's in Computer Science,Computer Science & IT
+3,PhD in Computer Science,Computer Science & IT
+4,Bachelor's in Information Technology,Computer Science & IT
+5,Master's in Information Technology,Computer Science & IT
+6,Bachelor's in Software Engineering,Computer Science & IT
+7,Master's in Software Engineering,Computer Science & IT
+8,Bachelor's in Computer Engineering,Computer Science & IT
+9,Master's in Computer Engineering,Computer Science & IT
+10,Bachelor's in IT Infrastructure,Computer Science & IT
+11,Bachelor's in System Administration,Computer Science & IT
+12,Bachelor's in Network Engineering,Computer Science & IT
+13,Bachelor's in Web Development,Computer Science & IT
+14,Bachelor's in Database Management,Computer Science & IT
+15,Bachelor's in Information Systems,Computer Science & IT
+16,Bachelor's in Cybersecurity,Computer Science & IT
+17,Master's in Cybersecurity,Computer Science & IT
+18,Bachelor's in Information Security,Computer Science & IT
+19,Bachelor's in Game Development,Computer Science & IT
+20,Bachelor's in Mobile App Development,Computer Science & IT
+21,Master's in Artificial Intelligence,Computer Science & IT
+22,PhD in Artificial Intelligence,Computer Science & IT
+23,Bachelor's in Business Administration,Business & Management
+24,Master's in Business Administration,Business & Management
+25,Bachelor's in Marketing,Business & Management
+26,Master's in Marketing,Business & Management
+27,Bachelor's in Finance,Business & Management
+28,Master's in Finance,Business & Management
+29,Bachelor's in Accounting,Business & Management
+30,Master's in Accounting,Business & Management
+31,Bachelor's in Economics,Business & Management
+32,Master's in Economics,Business & Management
+33,Bachelor's in Management,Business & Management
+34,Master's in Management,Business & Management
+35,Bachelor's in Human Resources,Business & Management
+36,Master's in Human Resources,Business & Management
+37,Bachelor's in International Business,Business & Management
+38,Master's in International Business,Business & Management
+39,Bachelor's in Supply Chain Management,Business & Management
+40,Master's in Supply Chain Management,Business & Management
+41,Bachelor's in Entrepreneurship,Business & Management
+42,Bachelor's in Project Management,Business & Management
+43,Master's in Project Management,Business & Management
+44,Bachelor's in Operations Management,Business & Management
+45,Bachelor's in Business Analytics,Business & Management
+46,Master's in Business Analytics,Business & Management
+47,Bachelor's in Graphic Design,Design & Creative Arts
+48,Bachelor's in Fine Arts,Design & Creative Arts
+49,Master's in Fine Arts,Design & Creative Arts
+50,Bachelor's in Industrial Design,Design & Creative Arts
+51,Bachelor's in Product Design,Design & Creative Arts
+52,Bachelor's in Interior Design,Design & Creative Arts
+53,Bachelor's in Fashion Design,Design & Creative Arts
+54,Bachelor's in Digital Media,Design & Creative Arts
+55,Bachelor's in Game Art,Design & Creative Arts
+56,Bachelor's in Animation,Design & Creative Arts
+57,Bachelor's in Film Production,Design & Creative Arts
+58,Bachelor's in Photography,Design & Creative Arts
+59,Bachelor's in Visual Communication,Design & Creative Arts
+60,Bachelor's in User Experience,Design & Creative Arts
+61,Master's in User Experience,Design & Creative Arts
+62,Bachelor's in Interactive Media,Design & Creative Arts
+63,Bachelor's in Web Design,Design & Creative Arts
+64,Bachelor's in Illustration,Design & Creative Arts
+65,Bachelor's in 3D Animation,Design & Creative Arts
+66,Bachelor's in Motion Graphics,Design & Creative Arts
+67,Bachelor's in Multimedia Design,Design & Creative Arts
+68,Bachelor's in Architecture,Design & Creative Arts
+69,Master's in Architecture,Design & Creative Arts
+70,Bachelor's in Engineering,Science & Engineering
+71,Master's in Engineering,Science & Engineering
+72,Bachelor's in Mechanical Engineering,Science & Engineering
+73,Master's in Mechanical Engineering,Science & Engineering
+74,Bachelor's in Electrical Engineering,Science & Engineering
+75,Master's in Electrical Engineering,Science & Engineering
+76,Bachelor's in Civil Engineering,Science & Engineering
+77,Master's in Civil Engineering,Science & Engineering
+78,Bachelor's in Chemical Engineering,Science & Engineering
+79,Bachelor's in Biomedical Engineering,Science & Engineering
+80,Master's in Biomedical Engineering,Science & Engineering
+81,Bachelor's in Environmental Engineering,Science & Engineering
+82,Bachelor's in Materials Science,Science & Engineering
+83,Bachelor's in Physics,Science & Engineering
+84,Master's in Physics,Science & Engineering
+85,PhD in Physics,Science & Engineering
+86,Bachelor's in Chemistry,Science & Engineering
+87,Master's in Chemistry,Science & Engineering
+88,PhD in Chemistry,Science & Engineering
+89,Bachelor's in Biology,Science & Engineering
+90,Master's in Biology,Science & Engineering
+91,PhD in Biology,Science & Engineering
+92,Bachelor's in Mathematics,Science & Engineering
+93,Master's in Mathematics,Science & Engineering
+94,PhD in Mathematics,Science & Engineering
+95,Bachelor's in Data Science,Data Science & Analytics
+96,Master's in Data Science,Data Science & Analytics
+97,PhD in Data Science,Data Science & Analytics
+98,Bachelor's in Statistics,Data Science & Analytics
+99,Master's in Statistics,Data Science & Analytics
+100,PhD in Statistics,Data Science & Analytics
+101,Bachelor's in Analytics,Data Science & Analytics
+102,Master's in Analytics,Data Science & Analytics
+103,Bachelor's in Business Intelligence,Data Science & Analytics
+104,Master's in Business Intelligence,Data Science & Analytics
+105,Bachelor's in Machine Learning,Data Science & Analytics
+106,Master's in Machine Learning,Data Science & Analytics
+107,PhD in Machine Learning,Data Science & Analytics
+108,Bachelor's in Computational Science,Data Science & Analytics
+109,Master's in Computational Science,Data Science & Analytics
+110,PhD in Computational Science,Data Science & Analytics
+111,Bachelor's in Health Sciences,Healthcare & Medicine
+112,Master's in Health Sciences,Healthcare & Medicine
+113,Bachelor's in Nursing,Healthcare & Medicine
+114,Master's in Nursing,Healthcare & Medicine
+115,Bachelor's in Healthcare Administration,Healthcare & Medicine
+116,Master's in Healthcare Administration,Healthcare & Medicine
+117,Bachelor's in Public Health,Healthcare & Medicine
+118,Master's in Public Health,Healthcare & Medicine
+119,Bachelor's in Healthcare Management,Healthcare & Medicine
+120,Master's in Healthcare Management,Healthcare & Medicine
+121,Bachelor's in Health Information Management,Healthcare & Medicine
+122,Bachelor's in Medical Technology,Healthcare & Medicine
+123,Bachelor's in Pharmacy,Healthcare & Medicine
+124,Doctor of Pharmacy,Healthcare & Medicine
+125,Bachelor's in Psychology,Humanities & Social Sciences
+126,Master's in Psychology,Humanities & Social Sciences
+127,PhD in Psychology,Humanities & Social Sciences
+128,Bachelor's in Sociology,Humanities & Social Sciences
+129,Master's in Sociology,Humanities & Social Sciences
+130,Bachelor's in Communications,Humanities & Social Sciences
+131,Master's in Communications,Humanities & Social Sciences
+132,Bachelor's in English,Humanities & Social Sciences
+133,Master's in English,Humanities & Social Sciences
+134,Bachelor's in Journalism,Humanities & Social Sciences
+135,Master's in Journalism,Humanities & Social Sciences
+136,Bachelor's in Political Science,Humanities & Social Sciences
+137,Master's in Political Science,Humanities & Social Sciences
+138,Bachelor's in History,Humanities & Social Sciences
+139,Master's in History,Humanities & Social Sciences
+140,Bachelor's in Philosophy,Humanities & Social Sciences
+141,Master's in Philosophy,Humanities & Social Sciences
+142,PhD in Philosophy,Humanities & Social Sciences
+143,Bachelor's in Linguistics,Humanities & Social Sciences
+144,Master's in Linguistics,Humanities & Social Sciences
+145,PhD in Linguistics,Humanities & Social Sciences
+146,Bachelor's in Education,Humanities & Social Sciences
+147,Master's in Education,Humanities & Social Sciences
+148,PhD in Education,Humanities & Social Sciences
+149,Bachelor's in Law,Specialized & Professional
+150,Juris Doctor,Specialized & Professional
+151,Master's in Legal Studies,Specialized & Professional
+152,Bachelor's in Criminal Justice,Specialized & Professional
+153,Master's in Criminal Justice,Specialized & Professional
+154,Bachelor's in Hospitality Management,Specialized & Professional
+155,Bachelor's in Tourism Management,Specialized & Professional
+156,Bachelor's in Event Management,Specialized & Professional
+157,Bachelor's in Sports Management,Specialized & Professional
+158,Bachelor's in Music,Specialized & Professional
+159,Master's in Music,Specialized & Professional
+160,Bachelor's in Theater Arts,Specialized & Professional
+161,Master's in Theater Arts,Specialized & Professional
+162,Bachelor's in Fashion Merchandising,Specialized & Professional
+163,Bachelor's in Retail Management,Specialized & Professional
+164,Bachelor's in Real Estate,Specialized & Professional
+165,Master's in Real Estate,Specialized & Professional
+166,Bachelor's in Urban Planning,Specialized & Professional
+167,Master's in Urban Planning,Specialized & Professional
+168,Bachelor's in Environmental Science,Specialized & Professional
+169,Master's in Environmental Science,Specialized & Professional
+170,Bachelor's in Sustainability,Specialized & Professional
+171,Master's in Sustainability,Specialized & Professional
+172,Associate's in Business Administration,Associate & Certificate Programs
+173,Associate's in Computer Science,Associate & Certificate Programs
+174,Associate's in Information Technology,Associate & Certificate Programs
+175,Associate's in Graphic Design,Associate & Certificate Programs
+176,Associate's in Web Design,Associate & Certificate Programs
+177,Associate's in Photography,Associate & Certificate Programs
+178,Associate's in Culinary Arts,Associate & Certificate Programs
+179,Associate's in Healthcare Administration,Associate & Certificate Programs
+180,Associate's in Nursing,Associate & Certificate Programs
+181,Associate's in Paralegal Studies,Associate & Certificate Programs
+182,Certificate in Project Management,Associate & Certificate Programs
+183,Certificate in Digital Marketing,Associate & Certificate Programs
+184,Certificate in Web Development,Associate & Certificate Programs
+185,Certificate in Data Analytics,Associate & Certificate Programs
+186,Certificate in Cybersecurity,Associate & Certificate Programs
