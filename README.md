@@ -1,7 +1,7 @@
 # 🔆 Hidden Paths - Career Assistant 🔆
 
 ## Overview
-Hidden Paths is an agentic career guidance application that helps users discover unexpected career paths based on their skills, interests, and educational background. The application creates personalized career roadmaps visualized as interactive graphs, showing potential career transitions across different industries.
+Hidden Paths is an agentic career guidance application that helps users discover unexpected career paths based on their skills, interests, and educational background. The application creates personalized career roadmaps visualized as interactive RAG graphs, showing potential career transitions across different industries.
 
 ## Key Features 
 
@@ -16,8 +16,8 @@ Hidden Paths is an agentic career guidance application that helps users discover
 - Distinguishes between traditional and unique career opportunities
 
 ### 3. Interactive Interface
-- **Visualize Careers**: Interactive graphs showing potential career paths and connections
-- **Career Chat**: AI-powered assistant that answers questions about careers, skills, and job opportunities
+- **Visualize Careers**: Interactive RAG graphs showing potential career paths and connections
+- **Career Chat**: Agentic career that answers questions about careers, skills, and job opportunities
 
 ## How It Works ⚙️
 
