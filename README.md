@@ -16,8 +16,8 @@ Hidden Paths is an agentic career guidance application that helps users discover
 - Distinguishes between traditional and unique career opportunities
 
 ### 3. Interactive Interface
-- **Career Chat**: AI-powered assistant that answers questions about careers, skills, and job opportunities
 - **Visualize Careers**: Interactive graphs showing potential career paths and connections
+- **Career Chat**: AI-powered assistant that answers questions about careers, skills, and job opportunities
 
 ## How It Works ⚙️
 
