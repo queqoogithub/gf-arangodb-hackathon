@@ -28,24 +28,24 @@
             "category": "Agriculture",
             "job_description": "Grows crops and raises livestock using organic methods.",
             "hard_skill": [
-                "Quality Control",
                 "Environmental Management",
-                "Process Improvement",
                 "Sustainability Planning",
-                "Operations Management"
+                "Quality Control",
+                "Operations Management",
+                "Process Improvement"
             ],
             "soft_skill": [
                 "Persistence",
-                "Creativity",
-                "Sustainability Awareness",
+                "Problem Solving",
                 "Communication",
-                "Problem Solving"
+                "Creativity",
+                "Sustainability Awareness"
             ],
             "interest": [
-                "Healthy Living",
-                "Composting",
                 "Gardening",
-                "Sustainability"
+                "Healthy Living",
+                "Sustainability",
+                "Composting"
             ],
             "education": [
                 "Bachelor's in Sustainability",
@@ -62,28 +62,28 @@
                     "category": "Environment",
                     "job_description": "Implements strategies to prevent soil erosion and degradation.",
                     "hard_skill": [
-                        "Data Analysis",
                         "Environmental Management",
-                        "Research",
+                        "Sustainability Planning",
                         "GIS",
-                        "Sustainability Planning"
+                        "Research",
+                        "Data Analysis"
                     ],
                     "soft_skill": [
-                        "Sustainability Awareness",
-                        "Analytical Thinking",
-                        "Communication",
                         "Problem Solving",
-                        "Research"
+                        "Communication",
+                        "Research",
+                        "Analytical Thinking",
+                        "Sustainability Awareness"
                     ],
                     "interest": [
-                        "Outdoor Activities",
-                        "Soil Science",
                         "Land Restoration",
-                        "Environmental Management"
+                        "Environmental Management",
+                        "Outdoor Activities",
+                        "Soil Science"
                     ],
                     "education": [
-                        "Master's in Environmental Science",
-                        "Bachelor's in Environmental Science"
+                        "Bachelor's in Environmental Science",
+                        "Master's in Environmental Science"
                     ]
                 },
                 {
@@ -96,32 +96,32 @@
                     "category": "Business",
                     "job_description": "Transportation",
                     "hard_skill": [
-                        "Environmental Management",
                         "Stakeholder Management",
+                        "Environmental Management",
                         "Sustainability Planning",
-                        "SEM",
-                        "Regulatory Compliance"
+                        "Regulatory Compliance",
+                        "SEM"
                     ],
                     "soft_skill": [
-                        "Organization",
                         "Problem Solving",
                         "Communication",
+                        "Research",
                         "Strategic Thinking",
+                        "Organization",
                         "Leadership",
-                        "Decision Making",
-                        "Research"
+                        "Decision Making"
                     ],
                     "interest": [
                         "Business Strategy",
                         "Green Initiatives",
+                        "Corporate Social Responsibility",
                         "Sustainability",
-                        "Environmental Science",
-                        "Corporate Social Responsibility"
+                        "Environmental Science"
                     ],
                     "education": [
+                        "Bachelor's in Environmental Science",
                         "Bachelor's in Business Administration",
-                        "Master's in Sustainability",
-                        "Bachelor's in Environmental Science"
+                        "Master's in Sustainability"
                     ]
                 }
             ]
@@ -136,28 +136,28 @@
             "category": "Environment",
             "job_description": "Develops programs to promote sustainable agricultural practices.",
             "hard_skill": [
-                "Data Analysis",
                 "Environmental Management",
                 "Sustainability Planning",
                 "Project Management",
+                "Data Analysis",
                 "Strategic Planning"
             ],
             "soft_skill": [
+                "Problem Solving",
+                "Communication",
                 "Creativity",
                 "Sustainability Awareness",
-                "Stakeholder Management",
-                "Communication",
-                "Problem Solving"
+                "Stakeholder Management"
             ],
             "interest": [
+                "Research",
                 "Sustainability",
                 "Environmental Management",
-                "Green Initiatives",
-                "Research"
+                "Green Initiatives"
             ],
             "education": [
-                "Master's in Sustainability",
-                "Bachelor's in Sustainability"
+                "Bachelor's in Sustainability",
+                "Master's in Sustainability"
             ],
             "children": [
                 {
@@ -170,32 +170,32 @@
                     "category": "Business",
                     "job_description": "Transportation",
                     "hard_skill": [
-                        "Environmental Management",
                         "Stakeholder Management",
-                        "Construction Management",
+                        "Environmental Management",
                         "Sustainability Planning",
-                        "SEM"
+                        "SEM",
+                        "Construction Management"
                     ],
                     "soft_skill": [
                         "Ethics",
-                        "Analytical Thinking",
                         "Problem Solving",
-                        "Communication",
                         "Technical Understanding",
+                        "Communication",
+                        "Research",
                         "Strategic Thinking",
-                        "Research"
+                        "Analytical Thinking"
                     ],
                     "interest": [
                         "Climate Action",
+                        "Corporate Social Responsibility",
                         "Environmental Management",
-                        "Green Business",
                         "Sustainability",
-                        "Corporate Social Responsibility"
+                        "Green Business"
                     ],
                     "education": [
+                        "Bachelor's in Environmental Science",
                         "Bachelor's in Engineering",
-                        "Master's in Sustainability",
-                        "Bachelor's in Environmental Science"
+                        "Master's in Sustainability"
                     ]
                 },
                 {
@@ -208,11 +208,11 @@
                     "category": "Business",
                     "job_description": "Transportation",
                     "hard_skill": [
-                        "SEM",
-                        "Environmental Management",
                         "Stakeholder Management",
+                        "Environmental Management",
                         "Sustainability Planning",
                         "Regulatory Compliance",
+                        "SEM",
                         "Change Management"
                     ],
                     "soft_skill": [
@@ -226,15 +226,15 @@
                     ],
                     "interest": [
                         "Business Strategy",
+                        "Corporate Social Responsibility",
                         "Environmental Management",
                         "Sustainability",
-                        "Corporate Social Responsibility",
                         "Social Impact"
                     ],
                     "education": [
-                        "Master's in Sustainability",
                         "Bachelor's in Sustainability",
-                        "Bachelor's in Environmental Science"
+                        "Bachelor's in Environmental Science",
+                        "Master's in Sustainability"
                     ]
                 }
             ]
@@ -251,29 +251,29 @@
             "hard_skill": [
                 "Resource Allocation",
                 "Environmental Management",
+                "Sustainability Planning",
                 "Construction Management",
                 "Architecture",
-                "Sustainability Planning",
                 "Solidity"
             ],
             "soft_skill": [
-                "Spatial Thinking",
-                "Creativity",
-                "Sustainability Awareness",
-                "Communication",
                 "Problem Solving",
                 "Technical Understanding",
-                "Research"
+                "Communication",
+                "Research",
+                "Creativity",
+                "Sustainability Awareness",
+                "Spatial Thinking"
             ],
             "interest": [
                 "Business Planning",
-                "Sustainable Design",
                 "Ecology",
+                "Sustainable Design",
                 "Green Business"
             ],
             "education": [
-                "Bachelor's in Architecture",
                 "Master's in Environmental Science",
+                "Bachelor's in Architecture",
                 "Master's in Sustainability"
             ],
             "children": [
@@ -288,27 +288,27 @@
                     "job_description": "Designs systems to mitigate environmental damage and pollution.",
                     "hard_skill": [
                         "Risk Assessment",
-                        "Data Analysis",
                         "Environmental Management",
-                        "Engineering Design",
-                        "Project Management"
+                        "Project Management",
+                        "Data Analysis",
+                        "Engineering Design"
                     ],
                     "soft_skill": [
-                        "Creativity",
-                        "Sustainability Awareness",
-                        "Analytical Thinking",
                         "Problem Solving",
-                        "Technical Understanding"
+                        "Technical Understanding",
+                        "Creativity",
+                        "Analytical Thinking",
+                        "Sustainability Awareness"
                     ],
                     "interest": [
-                        "Sustainability",
                         "Engineering Design",
-                        "Green Technology",
-                        "Research"
+                        "Sustainability",
+                        "Research",
+                        "Green Technology"
                     ],
                     "education": [
-                        "Master's in Civil Engineering",
-                        "Bachelor's in Environmental Engineering"
+                        "Bachelor's in Environmental Engineering",
+                        "Master's in Civil Engineering"
                     ]
                 },
                 {
@@ -321,28 +321,28 @@
                     "category": "Environment",
                     "job_description": "Studies environmental impacts and develops solutions for pollution control.",
                     "hard_skill": [
-                        "Data Visualization",
-                        "Statistical Analysis",
-                        "Data Analysis",
                         "Environmental Management",
-                        "Research"
+                        "Research",
+                        "Statistical Analysis",
+                        "Data Visualization",
+                        "Data Analysis"
                     ],
                     "soft_skill": [
-                        "Sustainability Awareness",
-                        "Analytical Thinking",
-                        "Communication",
                         "Problem Solving",
-                        "Research"
+                        "Communication",
+                        "Research",
+                        "Analytical Thinking",
+                        "Sustainability Awareness"
                     ],
                     "interest": [
-                        "Sustainability",
-                        "Climate Science",
+                        "Recycling",
                         "Research",
-                        "Recycling"
+                        "Sustainability",
+                        "Climate Science"
                     ],
                     "education": [
-                        "Master's in Environmental Science",
-                        "Bachelor's in Environmental Science"
+                        "Bachelor's in Environmental Science",
+                        "Master's in Environmental Science"
                     ]
                 }
             ]
